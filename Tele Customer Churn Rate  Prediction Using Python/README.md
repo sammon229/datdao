@@ -38,11 +38,11 @@ For a comprehensive analysis and detailed findings, refer to the accompanying do
 ### Setup:
 ```bash
 # Clone this repository
-git clone https://github.com/yourusername/telecom-churn-prediction
+git clone https://github.com/sammon229/datdao/
 # Navigate to the project directory
-cd telecom-churn-prediction
+cd Tele Customer Churn Rate  Prediction Using Python
 # Install required Python packages
 pip install -r requirements.txt
 
 # Running the analysis script
-python churn_analysis.py
+python Customer Churn Rate Prediction using Python.ipynb
