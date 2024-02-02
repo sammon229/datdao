@@ -1,8 +1,6 @@
 # Real Estate Price Prediction using R
 
 ### Author: Dat Dao
-### Date: February 12, 2023
-
 ## Introduction
 This study delves into the impact of various house characteristics on the final sale price. Using a detailed dataset from Ames, Iowa, the project aims to create a reliable model for predicting house prices, helping buyers, sellers, real estate agents, appraisers, and investors make informed decisions.
 
