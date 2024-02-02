@@ -1,7 +1,7 @@
 # Ames Iowa Residential Properties Analysis
 
 ### Author: Dat Dao
-### Project: Final Project - Data Exploration and Analysis
+### Project: Data Exploration and Analysis
 
 ## Introduction
 This project explores a comprehensive dataset containing information about residential properties in Ames, Iowa. The dataset includes various home characteristics such as living area, number of bedrooms and bathrooms, garage size, overall quality and condition, as well as the year built, remodeled, and the final sale price.
