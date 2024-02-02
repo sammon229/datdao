@@ -1,27 +1,48 @@
-Telecom Customer Churn Prediction Project
-Overview
-This project focuses on predicting customer churn within the telecom industry using data analytics and machine learning techniques. By analyzing a comprehensive dataset encompassing customer demographics, service subscriptions, account details, and churn status, we aim to identify key factors that contribute to customer churn and provide actionable insights for telecom companies to enhance their customer retention strategies.
+# Telecom Customer Churn Prediction
 
-Dataset
-The analysis utilizes the Telco Customer Churn dataset available on Kaggle. It includes information on 7,043 customers, covering aspects such as customer demographics, service usage, account information, and churn status. The dataset has been preprocessed to ensure data quality, including handling missing values and converting relevant columns to appropriate data types for analysis.
+### Author: Dat Dao
 
-Key Findings
-Longer tenure and lower monthly charges are associated with lower churn rates.
-Key predictors of churn include contract type, monthly charges, and tenure.
-The Logistic Regression model exhibited the highest accuracy in predicting churn, followed closely by LDA and Random Forest models.
-Models Used
-Logistic Regression: Provided the best accuracy and is recommended for predicting customer churn.
-Random Forest: Offered valuable insights into feature importance and customer segmentation.
-Linear Discriminant Analysis (LDA): Served as an effective alternative for dimensionality reduction and classification.
-Usage
-To use this project for churn prediction, follow these steps:
+## Introduction
+This project investigates the factors leading to customer churn in the telecom industry. By analyzing customer data, including demographics, service subscriptions, and account details, we aim to develop a model that accurately predicts churn, thereby enabling telecom companies to devise effective retention strategies.
 
-Data Preparation: Clean and preprocess your customer data according to the guidelines provided in the data preparation section.
-Model Training: Use the provided code snippets to train the models on your dataset.
-Prediction: Apply the trained models to predict churn in your customer base.
-Evaluation and Implementation: Assess the models' performance using the provided evaluation metrics and implement the insights derived from the analysis to inform your customer retention strategies.
-Ethical Considerations
-This project adheres to ethical standards in data handling and analysis, ensuring customer privacy, data security, and the responsible application of predictive insights.
+## Research Questions
+The study addresses key questions regarding customer retention in telecom:
+- What factors contribute most significantly to customer churn?
+- How can predictive modeling inform retention strategies?
+- What role do service features and customer demographics play in churn likelihood?
 
-Future Work
-Future improvements include integrating additional data sources, such as customer satisfaction surveys or social media sentiment, and continuously updating the models with new customer data to enhance predictive accuracy.
+## Approach
+The project employs a data-driven approach, utilizing machine learning models like Logistic Regression, Random Forest, and Linear Discriminant Analysis (LDA) to predict churn. It emphasizes the importance of data preprocessing, model optimization, and performance evaluation in developing a reliable predictive framework.
+
+## Data
+The analysis is based on the Telco Customer Churn dataset from Kaggle, covering 7,043 customers with 21 features, including customer account information, service usage, and churn status. The dataset was meticulously cleaned and preprocessed to ensure its suitability for model training and analysis.
+
+## Methodology
+- **Data Preprocessing**: Cleaning data, handling missing values, and converting variables to appropriate data types.
+- **Feature Selection**: Removing low-correlation features to prevent overfitting and improve model performance.
+- **Model Training**: Applying Logistic Regression, Random Forest, and LDA models to the preprocessed data.
+- **Performance Evaluation**: Assessing model accuracy and identifying key predictors of churn.
+
+## Implications
+The project highlights the criticality of understanding customer behavior and the potential of predictive analytics in crafting targeted retention strategies. It also discusses the ethical considerations in using customer data for predictive purposes.
+
+## Conclusion
+The findings indicate that factors like tenure, contract type, and monthly charges are pivotal in predicting churn. The Logistic Regression model, in particular, demonstrated high accuracy, making it a valuable tool for telecom companies in their efforts to reduce churn and enhance customer loyalty.
+
+For a comprehensive analysis and detailed findings, refer to the accompanying documentation and analysis scripts.
+
+### Requirements:
+- Python 3.8+
+- Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
+
+### Setup:
+```bash
+# Clone this repository
+git clone https://github.com/yourusername/telecom-churn-prediction
+# Navigate to the project directory
+cd telecom-churn-prediction
+# Install required Python packages
+pip install -r requirements.txt
+
+# Running the analysis script
+python churn_analysis.py
