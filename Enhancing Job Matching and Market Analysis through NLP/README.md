@@ -27,8 +27,3 @@ The application of NLP significantly enhances job matching algorithms and market
 ## Ethical Considerations
 Ensuring data privacy, mitigating algorithmic bias, and maintaining transparency in decision-making are paramount. We are committed to ethical AI practices that foster trust and fairness in job matching.
 
-## How to Contribute
-We welcome contributions from the community. Please see our contribution guidelines for more information on how to get involved.
-
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
