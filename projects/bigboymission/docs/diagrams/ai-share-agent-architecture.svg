@@ -1,0 +1,377 @@
+<svg viewBox="0 0 1185 872" role="img" lang="en" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="classic" data-quality-profile="showcase" data-node-ui="" data-reader-fit="intrinsic-height" data-reader-min-text="7.5" data-reader-primary-text="14">
+        <title id="archify-diagram-title">AI Share Agent Architecture</title>
+        <desc id="archify-diagram-description">BigBoy and MiuMiu synchronize through one canonical coordination layer</desc>
+        <!-- Definitions -->
+        <defs>
+          <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" class="m-default" />
+          </marker>
+          <marker id="arrowhead-emphasis" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" class="m-emphasis" />
+          </marker>
+          <marker id="arrowhead-security" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" class="m-security" />
+          </marker>
+          <marker id="arrowhead-dashed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" class="m-dashed" />
+          </marker>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" class="c-grid" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <style>
+          svg[data-node-ui] [data-node-id] > rect:not(.c-mask) { stroke-width: 1.25px; }
+          :is([data-theme="dark"] svg[data-node-ui], svg[data-node-ui][data-theme="dark"]) [data-node-id] > rect:not(.c-mask).c-frontend { fill: color-mix(in srgb, var(--frontend-stroke) 13%, var(--mask)); stroke: color-mix(in srgb, var(--frontend-stroke) 72%, var(--mask)); }
+          :is([data-theme="dark"] svg[data-node-ui], svg[data-node-ui][data-theme="dark"]) [data-node-id] > rect:not(.c-mask).c-backend { fill: color-mix(in srgb, var(--backend-stroke) 13%, var(--mask)); stroke: color-mix(in srgb, var(--backend-stroke) 72%, var(--mask)); }
+          :is([data-theme="dark"] svg[data-node-ui], svg[data-node-ui][data-theme="dark"]) [data-node-id] > rect:not(.c-mask).c-database { fill: color-mix(in srgb, var(--database-stroke) 13%, var(--mask)); stroke: color-mix(in srgb, var(--database-stroke) 72%, var(--mask)); }
+          :is([data-theme="dark"] svg[data-node-ui], svg[data-node-ui][data-theme="dark"]) [data-node-id] > rect:not(.c-mask).c-cloud { fill: color-mix(in srgb, var(--cloud-stroke) 13%, var(--mask)); stroke: color-mix(in srgb, var(--cloud-stroke) 72%, var(--mask)); }
+          :is([data-theme="dark"] svg[data-node-ui], svg[data-node-ui][data-theme="dark"]) [data-node-id] > rect:not(.c-mask).c-security { fill: color-mix(in srgb, var(--security-stroke) 13%, var(--mask)); stroke: color-mix(in srgb, var(--security-stroke) 72%, var(--mask)); }
+          :is([data-theme="dark"] svg[data-node-ui], svg[data-node-ui][data-theme="dark"]) [data-node-id] > rect:not(.c-mask).c-messagebus { fill: color-mix(in srgb, var(--messagebus-stroke) 13%, var(--mask)); stroke: color-mix(in srgb, var(--messagebus-stroke) 72%, var(--mask)); }
+          :is([data-theme="dark"] svg[data-node-ui], svg[data-node-ui][data-theme="dark"]) [data-node-id] > rect:not(.c-mask).c-external { fill: color-mix(in srgb, var(--external-stroke) 13%, var(--mask)); stroke: color-mix(in srgb, var(--external-stroke) 72%, var(--mask)); }
+          svg[data-node-ui]:is([data-preset="classic"], [data-preset="signal-flow"], [data-preset="editorial"]) .c-region { fill: color-mix(in srgb, var(--cloud-stroke) 3%, transparent); stroke: color-mix(in srgb, var(--cloud-stroke) 42%, var(--lane-stroke)); stroke-dasharray: none; }
+          svg[data-node-ui] .c-security-group { stroke: color-mix(in srgb, var(--security-stroke) 58%, var(--lane-stroke)); }
+          svg[data-node-ui]:is([data-preset="classic"], [data-preset="signal-flow"], [data-preset="editorial"]) .c-security-group { stroke-dasharray: 4 3; }
+          svg[data-node-ui]:is([data-preset="classic"], [data-preset="signal-flow"], [data-preset="editorial"]) .c-lane { stroke: var(--lane-stroke); stroke-dasharray: none; }
+          svg[data-node-ui] [data-graph-role="structural-frame-label-mask"] { rx: 5px; fill: color-mix(in srgb, var(--cloud-stroke) 10%, var(--mask)); stroke: color-mix(in srgb, var(--cloud-stroke) 38%, var(--mask)); stroke-width: .8px; }
+          svg[data-node-ui] [data-composition-frame-kind="security-group"] > [data-graph-role="structural-frame-label-mask"] { fill: color-mix(in srgb, var(--security-stroke) 9%, var(--mask)); stroke: color-mix(in srgb, var(--security-stroke) 36%, var(--mask)); }
+          svg[data-node-ui] .phase-rule { opacity: .5; stroke-dasharray: none; }
+          svg[data-node-ui] .phase-chip { stroke: var(--lane-stroke); stroke-width: .75px; }
+          svg[data-node-ui] g[data-edge-from] > rect.c-mask { rx: 7px; stroke: var(--lane-stroke); stroke-width: .75px; }
+          svg[data-node-ui][data-preset="blueprint"] :is([data-graph-role="structural-frame-label-mask"], g[data-edge-from] > rect.c-mask, .phase-chip) { rx: 2px; }
+          svg[data-node-ui][data-preset="editorial"] :is([data-graph-role="structural-frame-label-mask"], g[data-edge-from] > rect.c-mask, .phase-chip) { rx: 3px; }
+        </style>
+
+        <!-- Background Grid -->
+        <rect width="100%" height="100%" fill="url(#grid)" />
+
+        <!-- Boundaries (behind everything) -->
+
+
+        <!-- Connection paths (before components for correct z-order) -->
+        <g data-graph-role="automatic-crossover" style="--step:0">
+          <path data-graph-role="automatic-crossover-underlay" d="M 480 72 L 353 72 Q 345 72 345 80 L 345 170" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="dat" data-edge-to="bigboy" data-edge-label="directs" data-edge-key="0" data-edge-id="dat-bigboy" data-composition-points="480,72;345,72;345,170" data-composition-crossover="halo" data-composition-independent="true" d="M 480 72 L 353 72 Q 345 72 345 80 L 345 170" class="a-emphasis" data-animate="edge" style="--step:0" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:1">
+          <path data-graph-role="automatic-crossover-underlay" d="M 640 72 L 767 72 Q 775 72 775 80 L 775 170" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="dat" data-edge-to="miumiu" data-edge-label="authorizes" data-edge-key="1" data-edge-id="dat-miumiu" data-composition-points="640,72;775,72;775,170" data-composition-crossover="halo" data-composition-independent="true" d="M 640 72 L 767 72 Q 775 72 775 80 L 775 170" class="a-emphasis" data-animate="edge" style="--step:1" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:2">
+          <path data-graph-role="automatic-crossover-underlay" d="M 345 242 L 345 317 Q 345 325 353 325 L 410 325" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="bigboy" data-edge-to="share" data-edge-label="read / write tasks" data-edge-key="2" data-edge-id="bigboy-share" data-composition-points="345,242;345,325;410,325" data-composition-crossover="halo" data-composition-independent="true" d="M 345 242 L 345 317 Q 345 325 353 325 L 410 325" class="a-emphasis" data-animate="edge" style="--step:2" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:3">
+          <path data-graph-role="automatic-crossover-underlay" d="M 550 300 L 550 234 Q 550 226 542 226 L 440 226" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="share" data-edge-to="bigboy" data-edge-label="status / results" data-edge-key="3" data-edge-id="share-bigboy" data-composition-points="550,300;550,226;440,226" data-composition-crossover="halo" data-composition-independent="true" d="M 550 300 L 550 234 Q 550 226 542 226 L 440 226" class="a-emphasis" data-animate="edge" style="--step:3" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:4">
+          <path data-graph-role="automatic-crossover-underlay" d="M 758.9 242 L 758.9 263 Q 758.9 271 750.9 271 L 574.1 271 Q 566.1 271 566.1 279 L 566.1 300" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="miumiu" data-edge-to="share" data-edge-label="read / write tasks" data-edge-key="4" data-edge-id="miumiu-share" data-composition-points="758.9,242;758.9,271;566.1,271;566.1,300" data-composition-crossover="halo" data-composition-independent="true" d="M 758.9 242 L 758.9 263 Q 758.9 271 750.9 271 L 574.1 271 Q 566.1 271 566.1 279 L 566.1 300" class="a-emphasis" data-animate="edge" style="--step:4" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:5">
+          <path data-graph-role="automatic-crossover-underlay" d="M 690 330.95 L 767 330.95 Q 775 330.95 775 322.95 L 775 242" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="share" data-edge-to="miumiu" data-edge-label="status / results" data-edge-key="5" data-edge-id="share-miumiu" data-composition-points="690,330.95;775,330.95;775,242" data-composition-crossover="halo" data-composition-independent="true" d="M 690 330.95 L 767 330.95 Q 775 330.95 775 322.95 L 775 242" class="a-emphasis" data-animate="edge" style="--step:5" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:6">
+          <path data-graph-role="automatic-crossover-underlay" d="M 550 378 L 550 445" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="share" data-edge-to="fleet" data-edge-label="dispatch / report" data-edge-key="6" data-edge-id="share-fleet" data-composition-points="550,378;550,445" data-composition-crossover="halo" data-composition-independent="true" d="M 550 378 L 550 445" class="a-emphasis" data-animate="edge" style="--step:6" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:7">
+          <path data-graph-role="automatic-crossover-underlay" d="M 517 513 L 517 529 Q 517 537 509 537 L 163 537 Q 155 537 155 545 L 155 590" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="fleet" data-edge-to="it" data-edge-label="routes" data-edge-key="7" data-edge-id="fleet-it" data-composition-points="517,513;517,537;155,537;155,590" data-composition-crossover="halo" data-composition-independent="true" d="M 517 513 L 517 529 Q 517 537 509 537 L 163 537 Q 155 537 155 545 L 155 590" class="a-default" data-animate="edge" style="--step:7" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:8">
+          <path data-graph-role="automatic-crossover-underlay" d="M 531 513 L 531 543.5 Q 531 551.5 523 551.5 L 373 551.5 Q 365 551.5 365 559.5 L 365 590" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="fleet" data-edge-to="property" data-edge-label="routes" data-edge-key="8" data-edge-id="fleet-property" data-composition-points="531,513;531,551.5;365,551.5;365,590" data-composition-crossover="halo" data-composition-independent="true" d="M 531 513 L 531 543.5 Q 531 551.5 523 551.5 L 373 551.5 Q 365 551.5 365 559.5 L 365 590" class="a-default" data-animate="edge" style="--step:8" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:9">
+          <path data-graph-role="automatic-crossover-underlay" d="M 545 513 L 545 590" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="fleet" data-edge-to="trading" data-edge-label="routes" data-edge-key="9" data-edge-id="fleet-trading" data-composition-points="545,513;545,590" data-composition-crossover="halo" data-composition-independent="true" d="M 545 513 L 545 590" class="a-default" data-animate="edge" style="--step:9" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:10">
+          <path data-graph-role="automatic-crossover-underlay" d="M 559 513 L 559 529 Q 559 537 567 537 L 797 537 Q 805 537 805 545 L 805 590" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="fleet" data-edge-to="career" data-edge-label="routes" data-edge-key="10" data-edge-id="fleet-career" data-composition-points="559,513;559,537;805,537;805,590" data-composition-crossover="halo" data-composition-independent="true" d="M 559 513 L 559 529 Q 559 537 567 537 L 797 537 Q 805 537 805 545 L 805 590" class="a-default" data-animate="edge" style="--step:10" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:11">
+          <path data-graph-role="automatic-crossover-underlay" d="M 573 513 L 573 558 Q 573 566 581 566 L 1019.5 566 Q 1027.5 566 1027.5 574 L 1027.5 590" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="fleet" data-edge-to="independent" data-edge-label="routes" data-edge-key="11" data-edge-id="fleet-independent" data-composition-points="573,513;573,566;1027.5,566;1027.5,590" data-composition-crossover="halo" data-composition-independent="true" d="M 573 513 L 573 558 Q 573 566 581 566 L 1019.5 566 Q 1027.5 566 1027.5 574 L 1027.5 590" class="a-default" data-animate="edge" style="--step:11" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:12">
+          <path data-graph-role="automatic-crossover-underlay" d="M 585 660 L 585 740" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="trading" data-edge-to="trader" data-edge-label="approved execution" data-edge-key="12" data-edge-id="trading-trader" data-composition-points="585,660;585,740" data-composition-crossover="halo" data-composition-independent="true" d="M 585 660 L 585 740" class="a-security" data-animate="edge" style="--step:12" stroke-width="1.5" marker-end="url(#arrowhead-security)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:13">
+          <path data-graph-role="automatic-crossover-underlay" d="M 169 590 L 169 172.9 Q 169 164.9 177 164.9 L 536 164.9 Q 544 164.9 544 172.9 L 544 212 Q 544 220 552 220 L 670 220" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="it" data-edge-to="miumiu" data-edge-label="capacity overflow via AI Share" data-edge-key="13" data-edge-id="it-miumiu-overflow" data-composition-points="169,590;169,164.9;544,164.9;544,220;670,220" data-composition-crossover="halo" data-composition-independent="true" d="M 169 590 L 169 172.9 Q 169 164.9 177 164.9 L 536 164.9 Q 544 164.9 544 172.9 L 544 212 Q 544 220 552 220 L 670 220" class="a-dashed" data-animate="edge" style="--step:12" stroke-width="1.5" marker-end="url(#arrowhead-dashed)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:14">
+          <path data-graph-role="automatic-crossover-underlay" d="M 410 362 L 382 362 Q 374 362 374 370 L 374 445" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="share" data-edge-to="kanban" data-edge-label="ownership" data-edge-key="14" data-edge-id="share-kanban" data-composition-points="410,362;374,362;374,445" data-composition-crossover="halo" data-composition-independent="true" d="M 410 362 L 382 362 Q 374 362 374 370 L 374 445" class="a-default" data-animate="edge" style="--step:12" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:15">
+          <path data-graph-role="automatic-crossover-underlay" d="M 565.05 378 L 565.05 403.5 Q 565.05 411.5 573.05 411.5 L 767 411.5 Q 775 411.5 775 419.5 L 775 445" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="share" data-edge-to="memory" data-edge-label="durable facts" data-edge-key="15" data-edge-id="share-memory" data-composition-points="565.05,378;565.05,411.5;775,411.5;775,445" data-composition-crossover="halo" data-composition-independent="true" d="M 565.05 378 L 565.05 403.5 Q 565.05 411.5 573.05 411.5 L 767 411.5 Q 775 411.5 775 419.5 L 775 445" class="a-default" data-animate="edge" style="--step:12" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+        <g data-graph-role="automatic-crossover" style="--step:16">
+          <path data-graph-role="automatic-crossover-underlay" d="M 690 360 L 955 360 Q 963 360 963 368 L 963 445" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="share" data-edge-to="obsidian" data-edge-label="knowledge notes" data-edge-key="16" data-edge-id="share-obsidian" data-composition-points="690,360;963,360;963,445" data-composition-crossover="halo" data-composition-independent="true" d="M 690 360 L 955 360 Q 963 360 963 368 L 963 445" class="a-default" data-animate="edge" style="--step:12" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+        </g>
+
+        <!-- Components -->
+        <g id="node-dat" data-node-id="dat" data-node-label="Dat Dao" tabindex="0" role="button" aria-label="Focus Dat Dao, Owner / final authority, Architecture component" aria-pressed="false" data-node-kind="external" data-node-sublabel="Owner / final authority" data-node-context="Architecture component">
+          <title>Dat Dao · Owner / final authority · Architecture component</title>
+          <rect x="480" y="40" width="160" height="64" rx="8" class="c-mask"/>
+          <rect x="480" y="40" width="160" height="64" rx="8" class="c-external" data-animate="node" style="--step:0" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="person" class="semantic-sigil s-external" transform="translate(486 46) scale(0.6875)">
+            <circle cx="8" cy="4.5" r="2.5"/><path d="M3 14v-2a5 5 0 0 1 10 0v2"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="560" y="70" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Dat Dao</text>
+        <text data-detail="context" x="560" y="86" class="t-muted" font-size="9" text-anchor="middle">Owner / final authority</text>
+        </g>
+
+        <g id="node-bigboy" data-node-id="bigboy" data-node-label="BigBoy" tabindex="0" role="button" aria-label="Focus BigBoy, Hermes executive orchestrator, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Hermes executive orchestrator" data-node-context="Architecture component">
+          <title>BigBoy · Hermes executive orchestrator · Architecture component</title>
+          <rect x="250" y="170" width="190" height="72" rx="8" class="c-mask"/>
+          <rect x="250" y="170" width="190" height="72" rx="8" class="c-backend" data-animate="node" style="--step:1" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(256 176) scale(0.6875)">
+            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="345" y="204" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">BigBoy</text>
+        <text data-detail="context" x="345" y="220" class="t-muted" font-size="9" text-anchor="middle">Hermes executive orchestrator</text>
+        </g>
+
+        <g id="node-miumiu" data-node-id="miumiu" data-node-label="MiuMiu" tabindex="0" role="button" aria-label="Focus MiuMiu, External engineering orchestrator, Architecture component" aria-pressed="false" data-node-kind="external" data-node-sublabel="External engineering orchestrator" data-node-context="Architecture component">
+          <title>MiuMiu · External engineering orchestrator · Architecture component</title>
+          <rect x="670" y="170" width="210" height="72" rx="8" class="c-mask"/>
+          <rect x="670" y="170" width="210" height="72" rx="8" class="c-external" data-animate="node" style="--step:2" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="external" class="semantic-sigil s-external" transform="translate(676 176) scale(0.6875)">
+            <rect x="2.5" y="5" width="8.5" height="8" rx="1.5"/>
+            <path d="M8 2.5h5.5V8M13.5 2.5 7.5 8.5"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="775" y="204" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">MiuMiu</text>
+        <text data-detail="context" x="775" y="220" class="t-muted" font-size="9" text-anchor="middle">External engineering orchestrator</text>
+        </g>
+
+        <g id="node-share" data-node-id="share" data-node-label="AI Share" tabindex="0" role="button" aria-label="Focus AI Share, Canonical task state · Inbox · Outbox · Status · Results, Architecture component" aria-pressed="false" data-node-kind="messagebus" data-node-sublabel="Canonical task state · Inbox · Outbox · Status · Results" data-node-tag="bidirectional sync" data-node-context="Architecture component">
+          <title>AI Share · Canonical task state · Inbox · Outbox · Status · Results · Architecture component · bidirectional sync</title>
+          <rect x="410" y="300" width="280" height="78" rx="8" class="c-mask"/>
+          <rect x="410" y="300" width="280" height="78" rx="8" class="c-messagebus" data-animate="node" style="--step:3" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="messagebus" class="semantic-sigil s-messagebus" transform="translate(416 306) scale(0.6875)">
+            <path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/>
+            <circle cx="5" cy="4.5" r="1" class="sigil-fill"/>
+            <circle cx="10.5" cy="8" r="1" class="sigil-fill"/>
+            <circle cx="7" cy="11.5" r="1" class="sigil-fill"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="550" y="337" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">AI Share</text>
+        <text data-detail="context" x="550" y="353" class="t-muted" font-size="8" text-anchor="middle">Canonical task state · Inbox · Outbox · Status · Results</text>
+        <text data-detail="fine" x="550" y="370" class="t-messagebus" font-size="7" text-anchor="middle">bidirectional sync</text>
+        </g>
+
+        <g id="node-fleet" data-node-id="fleet" data-node-label="Hermes Agent Fleet" tabindex="0" role="button" aria-label="Focus Hermes Agent Fleet, 10 registered profiles, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="10 registered profiles" data-node-context="Architecture component">
+          <title>Hermes Agent Fleet · 10 registered profiles · Architecture component</title>
+          <rect x="420" y="445" width="250" height="68" rx="8" class="c-mask"/>
+          <rect x="420" y="445" width="250" height="68" rx="8" class="c-backend" data-animate="node" style="--step:7" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(426 451) scale(0.6875)">
+            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="545" y="477" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Hermes Agent Fleet</text>
+        <text data-detail="context" x="545" y="493" class="t-muted" font-size="9" text-anchor="middle">10 registered profiles</text>
+        </g>
+
+        <g id="node-it" data-node-id="it" data-node-label="Big IT Manager" tabindex="0" role="button" aria-label="Focus Big IT Manager, Hermes · IT · coding · QA · automation, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Hermes · IT · coding · QA · automation" data-node-context="Architecture component">
+          <title>Big IT Manager · Hermes · IT · coding · QA · automation · Architecture component</title>
+          <rect x="50" y="590" width="210" height="70" rx="8" class="c-mask"/>
+          <rect x="50" y="590" width="210" height="70" rx="8" class="c-backend" data-animate="node" style="--step:8" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(56 596) scale(0.6875)">
+            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="155" y="623" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Big IT Manager</text>
+        <text data-detail="context" x="155" y="639" class="t-muted" font-size="8.8" text-anchor="middle">Hermes · IT · coding · QA · automation</text>
+        </g>
+
+        <g id="node-property" data-node-id="property" data-node-label="Big Property Manager" tabindex="0" role="button" aria-label="Focus Big Property Manager, Property operations, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Property operations" data-node-context="Architecture component">
+          <title>Big Property Manager · Property operations · Architecture component</title>
+          <rect x="270" y="590" width="190" height="70" rx="8" class="c-mask"/>
+          <rect x="270" y="590" width="190" height="70" rx="8" class="c-backend" data-animate="node" style="--step:9" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(276 596) scale(0.6875)">
+            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="365" y="623" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Big Property Manager</text>
+        <text data-detail="context" x="365" y="639" class="t-muted" font-size="9" text-anchor="middle">Property operations</text>
+        </g>
+
+        <g id="node-trading" data-node-id="trading" data-node-label="Big Trading Manager" tabindex="0" role="button" aria-label="Focus Big Trading Manager, Trading and investing, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Trading and investing" data-node-context="Architecture component">
+          <title>Big Trading Manager · Trading and investing · Architecture component</title>
+          <rect x="490" y="590" width="190" height="70" rx="8" class="c-mask"/>
+          <rect x="490" y="590" width="190" height="70" rx="8" class="c-backend" data-animate="node" style="--step:10" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(496 596) scale(0.6875)">
+            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="585" y="623" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Big Trading Manager</text>
+        <text data-detail="context" x="585" y="639" class="t-muted" font-size="9" text-anchor="middle">Trading and investing</text>
+        </g>
+
+        <g id="node-career" data-node-id="career" data-node-label="Big Career Mentor" tabindex="0" role="button" aria-label="Focus Big Career Mentor, Career strategy and mentorship, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Career strategy and mentorship" data-node-context="Architecture component">
+          <title>Big Career Mentor · Career strategy and mentorship · Architecture component</title>
+          <rect x="710" y="590" width="190" height="70" rx="8" class="c-mask"/>
+          <rect x="710" y="590" width="190" height="70" rx="8" class="c-backend" data-animate="node" style="--step:11" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="briefcase" class="semantic-sigil s-backend" transform="translate(716 596) scale(0.6875)">
+            <rect x="2" y="5" width="12" height="9" rx="2"/><path d="M5 5V2h6v3M2 9h12M7 9v2h2V9"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="805" y="623" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Big Career Mentor</text>
+        <text data-detail="context" x="805" y="639" class="t-muted" font-size="9" text-anchor="middle">Career strategy and mentorship</text>
+        </g>
+
+        <g id="node-independent" data-node-id="independent" data-node-label="Independent agents" tabindex="0" role="button" aria-label="Focus Independent agents, Security Guy · Big Auditor · Nerdy · Nemo, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Security Guy · Big Auditor · Nerdy · Nemo" data-node-context="Architecture component">
+          <title>Independent agents · Security Guy · Big Auditor · Nerdy · Nemo · Architecture component</title>
+          <rect x="910" y="590" width="235" height="70" rx="8" class="c-mask"/>
+          <rect x="910" y="590" width="235" height="70" rx="8" class="c-backend" data-animate="node" style="--step:12" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="security" class="semantic-sigil s-backend" transform="translate(916 596) scale(0.6875)">
+            <path d="M8 2.2 13 4v3.5c0 3.1-1.8 5.4-5 6.5-3.2-1.1-5-3.4-5-6.5V4Z"/>
+            <path d="m5.8 8 1.5 1.5 3-3"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="1027.5" y="623" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Independent agents</text>
+        <text data-detail="context" x="1027.5" y="639" class="t-muted" font-size="9" text-anchor="middle">Security Guy · Big Auditor · Nerdy · Nemo</text>
+        </g>
+
+        <g id="node-trader" data-node-id="trader" data-node-label="Trader" tabindex="0" role="button" aria-label="Focus Trader, Trade execution specialist, Architecture component" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Trade execution specialist" data-node-context="Architecture component">
+          <title>Trader · Trade execution specialist · Architecture component</title>
+          <rect x="490" y="740" width="190" height="64" rx="8" class="c-mask"/>
+          <rect x="490" y="740" width="190" height="64" rx="8" class="c-backend" data-animate="node" style="--step:12" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(496 746) scale(0.6875)">
+            <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="585" y="770" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Trader</text>
+        <text data-detail="context" x="585" y="786" class="t-muted" font-size="9" text-anchor="middle">Trade execution specialist</text>
+        </g>
+
+        <g id="node-kanban" data-node-id="kanban" data-node-label="Kanban" tabindex="0" role="button" aria-label="Focus Kanban, Active task ownership, Architecture component" aria-pressed="false" data-node-kind="database" data-node-sublabel="Active task ownership" data-node-context="Architecture component">
+          <title>Kanban · Active task ownership · Architecture component</title>
+          <rect x="240" y="445" width="150" height="64" rx="8" class="c-mask"/>
+          <rect x="240" y="445" width="150" height="64" rx="8" class="c-database" data-animate="node" style="--step:12" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(246 451) scale(0.6875)">
+            <ellipse cx="8" cy="4" rx="5" ry="2"/>
+            <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="315" y="475" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Kanban</text>
+        <text data-detail="context" x="315" y="491" class="t-muted" font-size="9" text-anchor="middle">Active task ownership</text>
+        </g>
+
+        <g id="node-memory" data-node-id="memory" data-node-label="Mnemosyne" tabindex="0" role="button" aria-label="Focus Mnemosyne, Durable shared memory, Architecture component" aria-pressed="false" data-node-kind="database" data-node-sublabel="Durable shared memory" data-node-context="Architecture component">
+          <title>Mnemosyne · Durable shared memory · Architecture component</title>
+          <rect x="690" y="445" width="170" height="64" rx="8" class="c-mask"/>
+          <rect x="690" y="445" width="170" height="64" rx="8" class="c-database" data-animate="node" style="--step:12" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(696 451) scale(0.6875)">
+            <ellipse cx="8" cy="4" rx="5" ry="2"/>
+            <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="775" y="475" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Mnemosyne</text>
+        <text data-detail="context" x="775" y="491" class="t-muted" font-size="9" text-anchor="middle">Durable shared memory</text>
+        </g>
+
+        <g id="node-obsidian" data-node-id="obsidian" data-node-label="Obsidian" tabindex="0" role="button" aria-label="Focus Obsidian, Human-readable knowledge, Architecture component" aria-pressed="false" data-node-kind="database" data-node-sublabel="Human-readable knowledge" data-node-context="Architecture component">
+          <title>Obsidian · Human-readable knowledge · Architecture component</title>
+          <rect x="868" y="445" width="190" height="64" rx="8" class="c-mask"/>
+          <rect x="868" y="445" width="190" height="64" rx="8" class="c-database" data-animate="node" style="--step:12" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(874 451) scale(0.6875)">
+            <ellipse cx="8" cy="4" rx="5" ry="2"/>
+            <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="963" y="475" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Obsidian</text>
+        <text data-detail="context" x="963" y="491" class="t-muted" font-size="9" text-anchor="middle">Human-readable knowledge</text>
+        </g>
+
+        <!-- Connection labels -->
+        <g data-detail="context" data-edge-from="dat" data-edge-to="bigboy" data-edge-label="directs" data-edge-key="0" data-edge-id="dat-bigboy">
+          <rect x="323.2" y="101" width="43.6" height="14" rx="3" class="c-mask"/>
+          <text x="345" y="111" class="t-edge-emphasis" font-size="8" text-anchor="middle">directs</text>
+        </g>
+        <g data-detail="context" data-edge-from="dat" data-edge-to="miumiu" data-edge-label="authorizes" data-edge-key="1" data-edge-id="dat-miumiu">
+          <rect x="746" y="101" width="58" height="14" rx="3" class="c-mask"/>
+          <text x="775" y="111" class="t-edge-emphasis" font-size="8" text-anchor="middle">authorizes</text>
+        </g>
+        <g data-detail="context" data-edge-from="bigboy" data-edge-to="share" data-edge-label="read / write tasks" data-edge-key="2" data-edge-id="bigboy-share">
+          <rect x="242.60000000000002" y="276.5" width="96.39999999999999" height="14" rx="3" class="c-mask"/>
+          <text x="290.8" y="286.5" class="t-edge-emphasis" font-size="8" text-anchor="middle">read / write tasks</text>
+        </g>
+        <g data-detail="context" data-edge-from="share" data-edge-to="bigboy" data-edge-label="status / results" data-edge-key="3" data-edge-id="share-bigboy">
+          <rect x="451.6" y="206" width="86.8" height="14" rx="3" class="c-mask"/>
+          <text x="495" y="216" class="t-edge-emphasis" font-size="8" text-anchor="middle">status / results</text>
+        </g>
+        <g data-detail="context" data-edge-from="miumiu" data-edge-to="share" data-edge-label="read / write tasks" data-edge-key="4" data-edge-id="miumiu-share">
+          <rect x="614.3" y="251" width="96.39999999999999" height="14" rx="3" class="c-mask"/>
+          <text x="662.5" y="261" class="t-edge-emphasis" font-size="8" text-anchor="middle">read / write tasks</text>
+        </g>
+        <g data-detail="context" data-edge-from="share" data-edge-to="miumiu" data-edge-label="status / results" data-edge-key="5" data-edge-id="share-miumiu">
+          <rect x="682.2" y="279.475" width="86.8" height="14" rx="3" class="c-mask"/>
+          <text x="725.6" y="289.475" class="t-edge-emphasis" font-size="8" text-anchor="middle">status / results</text>
+        </g>
+        <g data-detail="context" data-edge-from="share" data-edge-to="fleet" data-edge-label="dispatch / report" data-edge-key="6" data-edge-id="share-fleet">
+          <rect x="452.4" y="404.5" width="91.6" height="14" rx="3" class="c-mask"/>
+          <text x="498.2" y="414.5" class="t-edge-emphasis" font-size="8" text-anchor="middle">dispatch / report</text>
+        </g>
+        <g data-detail="context" data-edge-from="fleet" data-edge-to="it" data-edge-label="routes" data-edge-key="7" data-edge-id="fleet-it">
+          <rect x="316.6" y="517" width="38.8" height="14" rx="3" class="c-mask"/>
+          <text x="336" y="527" class="t-edge-default" font-size="8" text-anchor="middle">routes</text>
+        </g>
+        <g data-detail="context" data-edge-from="fleet" data-edge-to="property" data-edge-label="routes" data-edge-key="8" data-edge-id="fleet-property">
+          <rect x="428.6" y="561.5" width="38.8" height="14" rx="3" class="c-mask"/>
+          <text x="448" y="571.5" class="t-edge-default" font-size="8" text-anchor="middle">routes</text>
+        </g>
+        <g data-detail="context" data-edge-from="fleet" data-edge-to="trading" data-edge-label="routes" data-edge-key="9" data-edge-id="fleet-trading">
+          <rect x="500.20000000000005" y="563.75" width="38.8" height="14" rx="3" class="c-mask"/>
+          <text x="519.6" y="573.75" class="t-edge-default" font-size="8" text-anchor="middle">routes</text>
+        </g>
+        <g data-detail="context" data-edge-from="fleet" data-edge-to="career" data-edge-label="routes" data-edge-key="10" data-edge-id="fleet-career">
+          <rect x="662.6" y="517" width="38.8" height="14" rx="3" class="c-mask"/>
+          <text x="682" y="527" class="t-edge-default" font-size="8" text-anchor="middle">routes</text>
+        </g>
+        <g data-detail="context" data-edge-from="fleet" data-edge-to="independent" data-edge-label="routes" data-edge-key="11" data-edge-id="fleet-independent">
+          <rect x="579" y="545.75" width="38.8" height="14" rx="3" class="c-mask"/>
+          <text x="598.4" y="555.75" class="t-edge-default" font-size="8" text-anchor="middle">routes</text>
+        </g>
+        <g data-detail="context" data-edge-from="trading" data-edge-to="trader" data-edge-label="approved execution" data-edge-key="12" data-edge-id="trading-trader">
+          <rect x="482.59999999999997" y="693" width="96.39999999999999" height="14" rx="3" class="c-mask"/>
+          <text x="530.8" y="703" class="t-edge-security" font-size="8" text-anchor="middle">approved execution</text>
+        </g>
+        <g data-detail="context" data-edge-from="it" data-edge-to="miumiu" data-edge-label="capacity overflow via AI Share" data-edge-key="13" data-edge-id="it-miumiu-overflow">
+          <rect x="9" y="370.45" width="154" height="14" rx="3" class="c-mask"/>
+          <text x="86" y="380.45" class="t-edge-dashed" font-size="8" text-anchor="middle">capacity overflow via AI Share</text>
+        </g>
+        <g data-detail="context" data-edge-from="share" data-edge-to="kanban" data-edge-label="ownership" data-edge-key="14" data-edge-id="share-kanban">
+          <rect x="347.4" y="383.5" width="53.199999999999996" height="14" rx="3" class="c-mask"/>
+          <text x="374" y="393.5" class="t-edge-default" font-size="8" text-anchor="middle">ownership</text>
+        </g>
+        <g data-detail="context" data-edge-from="share" data-edge-to="memory" data-edge-label="durable facts" data-edge-key="15" data-edge-id="share-memory">
+          <rect x="633.8249999999999" y="391.5" width="72.4" height="14" rx="3" class="c-mask"/>
+          <text x="670.025" y="401.5" class="t-edge-default" font-size="8" text-anchor="middle">durable facts</text>
+        </g>
+        <g data-detail="context" data-edge-from="share" data-edge-to="obsidian" data-edge-label="knowledge notes" data-edge-key="16" data-edge-id="share-obsidian">
+          <rect x="922" y="382.5" width="82" height="14" rx="3" class="c-mask"/>
+          <text x="963" y="392.5" class="t-edge-default" font-size="8" text-anchor="middle">knowledge notes</text>
+        </g>
+
+        <!-- Boundary labels (foreground masks keep routes out of titles) -->
+
+
+        <!-- Legend -->
+        <g data-legend="" data-legend-bridge="">
+          <text x="40" y="836" class="t-primary" font-size="12" font-weight="650">Legend</text>
+          <g data-legend-semantic-kind="backend" data-legend-kind="backend" data-legend-label="Backend" data-legend-x="40" data-legend-baseline="856" data-legend-width="87">
+            <rect x="40" y="847" width="16" height="10" rx="2.5" class="c-backend" stroke-width="1"/>
+            <text x="62" y="856" class="t-muted" font-size="10" font-weight="500">Backend</text>
+          </g>
+          <g data-legend-semantic-kind="database" data-legend-kind="database" data-legend-label="Database" data-legend-x="149" data-legend-baseline="856" data-legend-width="93">
+            <rect x="149" y="847" width="16" height="10" rx="2.5" class="c-database" stroke-width="1"/>
+            <text x="171" y="856" class="t-muted" font-size="10" font-weight="500">Database</text>
+          </g>
+          <g data-legend-semantic-kind="messagebus" data-legend-kind="messagebus" data-legend-label="Message bus" data-legend-x="264" data-legend-baseline="856" data-legend-width="112">
+            <rect x="264" y="847" width="16" height="10" rx="2.5" class="c-messagebus" stroke-width="1"/>
+            <text x="286" y="856" class="t-muted" font-size="10" font-weight="500">Message bus</text>
+          </g>
+          <g data-legend-semantic-kind="external" data-legend-kind="external" data-legend-label="External" data-legend-x="398" data-legend-baseline="856" data-legend-width="93">
+            <rect x="398" y="847" width="16" height="10" rx="2.5" class="c-external" stroke-width="1"/>
+            <text x="420" y="856" class="t-muted" font-size="10" font-weight="500">External</text>
+          </g>
+        </g>
+      </svg>
