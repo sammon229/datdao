@@ -1,7 +1,15 @@
 # Real Estate Valuation Optimization in King County
 
-## Project Overview
-This project applies machine learning to predict real estate values in King County, including Seattle. By analyzing property sales data, we aim to develop a model that aids buyers, sellers, and real estate professionals in making informed decisions.
+An applied machine-learning study for estimating residential sale prices in King County, including Seattle.
+
+## Portfolio snapshot
+
+| Item | Detail |
+| --- | --- |
+| Data | King County sales from May 2014 through May 2015 |
+| Features | Bedrooms, bathrooms, square footage, grade, location, and other property fields |
+| Model | Random Forest regression with exploratory analysis and feature engineering |
+| Use case | Decision support for valuation exploration, not an automated appraisal |
 
 ## Dataset
 The dataset encompasses property sales in King County from May 2014 to May 2015, featuring details like bedrooms, bathrooms, square footage, and sale price among its 21 columns.
@@ -28,7 +36,21 @@ The dataset encompasses property sales in King County from May 2014 to May 2015,
 - Incorporation of additional data sources for a more comprehensive analysis.
 
 ## Usage
-To run the analysis, ensure you have the necessary Python libraries installed and execute the Jupyter Notebook provided.
+Run the notebook from the project directory:
+
+```powershell
+git clone https://github.com/sammon229/datdao.git
+Set-Location "datdao/Real Estate Valuation Optimization in King County"
+python -m pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+jupyter notebook "Leveraging Machine Learning to Optimize Real Estate Valuation in King County.ipynb"
+```
+
+## Files
+
+- [Analysis notebook](Leveraging%20Machine%20Learning%20to%20Optimize%20Real%20Estate%20Valuation%20in%20King%20County.ipynb)
+- [King County data](kc_house_data.csv)
+- [Written report](Data%20mining%20Leveraging%20Machine%20Learning%20to%20Optimize%20Real%20Estate%20Valuation%20in%20King%20County.docx)
+- [Portfolio image](../images/housevalue.jpg)
 
 ## Disclaimer
 This project is intended for educational purposes and should not be used as the sole basis for real estate investment decisions.
@@ -36,3 +58,5 @@ This project is intended for educational purposes and should not be used as the 
 ## Acknowledgements
 - King County for providing the dataset.
 - Contributors to the Python libraries utilized in this analysis.
+
+[← Back to the portfolio](../README.md)

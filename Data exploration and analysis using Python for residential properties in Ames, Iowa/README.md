@@ -1,49 +1,44 @@
-# Ames Iowa Residential Properties Analysis
+# Ames Iowa Residential Property Analysis
 
-### Author: Dat Dao
-### Project: Data Exploration and Analysis
+Exploratory analysis of residential properties in Ames, Iowa, with a focus on the features associated with sale price.
 
-## Introduction
-This project explores a comprehensive dataset containing information about residential properties in Ames, Iowa. The dataset includes various home characteristics such as living area, number of bedrooms and bathrooms, garage size, overall quality and condition, as well as the year built, remodeled, and the final sale price.
+## Portfolio snapshot
 
-## Dataset Overview
-- **Columns**: 16 columns including:
-  - ID column
-  - 13 numerical columns
-  - 2 categorical columns (Neighborhood, Condition1, BldgType, and HouseStyle)
-- **Target Variable**: SalePrice, representing the property's final sale price in US dollars.
-- **Key Features**: Living area (GrLivArea), overall quality and condition (OverallQual and OverallCond), number of bedrooms and bathrooms, garage size, year built and remodeled.
+| Item | Detail |
+| --- | --- |
+| Question | Which property characteristics are most associated with SalePrice? |
+| Data | Ames residential sales with property, quality, location, and sale fields |
+| Tools | Python, pandas, NumPy, seaborn, matplotlib, statsmodels |
+| Approach | Cleaning, exploratory analysis, correlation review, and regression diagnostics |
+| Reported result | The original analysis reports an R-squared of approximately 45.2% for its regression specification |
 
-## Objectives
-- To build a regression model predicting the sale price based on various characteristics.
-- To explore the relationships between different features and the sale price, providing insights into factors affecting property values in the Ames, Iowa area.
+## What to look for
 
-## Key Observations
-- The condition of the property significantly influences the sale price, with a noticeable trend of higher prices for better conditions.
-- A positive correlation exists between the quality of a house and its sale price, with houses of higher quality generally selling at higher prices.
-- The living area of the house shows a moderately strong positive linear relationship with the sale price, indicating larger houses tend to be sold at higher prices.
+- Overall quality and living area show the clearest positive relationship with sale price.
+- Neighborhood, condition, garage capacity, and age provide useful context beyond square footage.
+- The notebook demonstrates how visual exploration and statistical diagnostics shape a modeling decision.
 
-## Statistical Findings
-- **Pearson Correlation Coefficient**: Indicates a moderately strong positive linear relationship between living area and sale price.
-- **R-squared**: 45.2% variance in sale price is explained by the predictor variables.
-- **Adj. R-squared**: Adjusted R-squared value considering the number of predictor variables.
-- **F-statistic**: Validates the overall significance of the model.
+## Files
 
-## Conclusion
-This analysis provides valuable insights into the real estate market of Ames, Iowa, helping understand the dynamics between property features and pricing. It emphasizes the importance of considering various home characteristics for accurate property valuation and market understanding.
+- [Analysis notebook](Data%20Exploreation%20and%20Analysis%20Ames%2CIowa.ipynb)
+- [Cleaned dataset](cleaned_data.csv)
+- [Project presentation](Data%20Exploration%20and%20Analysis%20Project.pptx)
+- [Written report](Ames%20Iowa%20Residential%20Properties%20Analysis.docx)
 
-For more detailed analysis or to use this dataset for further research, please refer to the complete study conducted by Dat Dao
+## Reproduce locally
 
-### Requirements:
-- Python (version 10)
-- Python libraries: numpy, pandas, matplotlib.pyplot, statsmodels.api, seaborn
-### Setup:
-```bash
-# Clone this repository
-git clone https://github.com/sammon229/datdao.github.io/new/main
-# Navigate to the project directory
-cd datdao.github.io/Data exploration and analysis using Python for residential properties in Ames, Iowa/
+```powershell
+git clone https://github.com/sammon229/datdao.git
+Set-Location "datdao/Data exploration and analysis using Python for residential properties in Ames, Iowa"
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install numpy pandas matplotlib seaborn statsmodels jupyter
+jupyter notebook "Data Exploreation and Analysis Ames,Iowa.ipynb"
+```
 
-# Running the script
-Pythonscript Data Exploreation and Analysis Ames,Iowa.ipynb
+## Limitations
+
+This is an Ames-specific educational analysis, not a production valuation service. The reported fit depends on the original feature selection, preprocessing, and train/test design; it should not be treated as a current market estimate.
+
+[← Back to the portfolio](../README.md)
 

@@ -1,33 +1,42 @@
-# Advanced Credit Card Fraud Detection System Analysis
+# Credit Card Fraud Detection
 
-### Author: Dat Dao
-### Project: Fraud Detection Research
+An imbalanced-classification study for identifying suspicious credit-card transactions while keeping recall, precision, and false-positive cost visible.
 
-## Introduction
-This research delves into a machine learning model crafted for credit card fraud detection, analyzing transactions from European cardholders in 2023 to pinpoint fraudulent activities.
+## Portfolio snapshot
 
-## Dataset Overview
-The dataset features transactional details, with key attributes focusing on anonymized features, transaction amount, and time, aiming to distinguish between fraudulent and legitimate transactions.
+| Item | Detail |
+| --- | --- |
+| Problem | Separate fraudulent and legitimate transactions from anonymized transaction data |
+| Features | Anonymized transaction variables plus amount and time fields |
+| Evaluation | Precision, recall, F1-score, accuracy, and cross-validation |
+| Priority | Investigate fraud without treating accuracy as the only success measure |
 
-## Objectives
-The goal is to create a predictive model capable of identifying fraud, emphasizing the analysis of feature relevance in fraudulent transactions.
+## Analysis focus
 
-## Key Insights
-Insights reveal specific features significantly correlated with fraud, underscoring patterns in fraudulent activities and the importance of accurate fraud prediction.
+- Inspect class imbalance before modeling.
+- Compare false-positive and false-negative trade-offs.
+- Review feature relevance rather than presenting the model as an opaque decision-maker.
+- Use cross-validation to reduce the risk of a single favorable split driving the conclusion.
 
-## Model Performance
-The model's efficacy is gauged using accuracy, precision, recall, and F1-score, with cross-validation ensuring reliability.
+## Files
 
-## Conclusion
-The study highlights the complexities of fraud detection and the potential of machine learning in addressing such challenges, advocating for ongoing model refinement.
+- [Analysis notebook](Credit%20Card%20Fraud.ipynb)
+- [Written report](Advanced%20Credit%20Card%20Fraud%20Detection%20System.docx)
+- [Portfolio image](../images/MIT-Fraud-Detection-PRESS_0.jpg)
 
-### Requirements:
-- Python (3.x recommended)
-- Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
+## Reproduce locally
 
-### Setup:
-```bash
-git clone https://github.com/sammon229/datdao
-cd Machine Learning Credit Card Fraud Detection
-pip install -r requirements.txt
-jupyter notebook Machine Learning Credit Card Fraud Detection/Credit Card Fraud.ipynb
+```powershell
+git clone https://github.com/sammon229/datdao.git
+Set-Location "datdao/Machine Learning Credit Card Fraud Detection"
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install pandas numpy scikit-learn matplotlib seaborn jupyter
+jupyter notebook "Credit Card Fraud.ipynb"
+```
+
+## Limitations
+
+The dataset is anonymized and historical, so the findings should not be treated as a production fraud rule. A deployable system would require threshold governance, drift monitoring, investigator feedback, privacy controls, and cost-sensitive validation on current transactions.
+
+[← Back to the portfolio](../README.md)

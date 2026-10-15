@@ -1,6 +1,17 @@
 # Real Estate Price Prediction using R
 
+An R-based housing-price study using Ames, Iowa sales data to compare interpretable regression with tree-based modeling.
+
 ### Author: Dat Dao
+
+## Portfolio snapshot
+
+| Item | Detail |
+| --- | --- |
+| Data | 2,930 Ames residential sales from 2006–2010 |
+| Target | SalePrice |
+| Methods | OLS, multicollinearity review, maximum-likelihood ideas, and Random Forest |
+| Reported result | The original study reports that the Random Forest approach explains approximately 85% of sale-price variation |
 ## Introduction
 This study delves into the impact of various house characteristics on the final sale price. Using a detailed dataset from Ames, Iowa, the project aims to create a reliable model for predicting house prices, helping buyers, sellers, real estate agents, appraisers, and investors make informed decisions.
 
@@ -24,23 +35,30 @@ The study acknowledges potential drawbacks like selection bias due to regional d
 ## Conclusion
 The study proposes an alternative approach using the Random Forest model, which outperforms multiple linear regression or decision trees by identifying variable importance and avoiding overfitting. The model can explain about 85% of the house sale price variation, highlighting the importance of both micro and macro factors in housing price prediction. The study's outcomes are envisioned to assist real estate brokers in enhancing their service and marketing strategies.
 
-For more information or to delve into the study's detailed analysis, please refer to the full research documentation&#8203;``【oaicite:0】``&#8203;.
+The accompanying data files and `FinalCode.R` preserve the original analysis materials for review.
 
 
 ### Requirements:
-- R (version 4.2.3)
-- R libraries: dplyr,forecast,randomForest,caret,psych,caTools,tidyr,xlsx,ggplot2,mice,lmtest,car
+- R (version 4.2.3 or newer)
+- R libraries: dplyr, forecast, randomForest, caret, psych, caTools, tidyr, xlsx, ggplot2, mice, lmtest, car
 
 ### Setup:
 ```bash
 # Clone this repository
-git clone https://github.com/sammon229/datdao.github.io/tree/main
+git clone https://github.com/sammon229/datdao.git
 # Navigate to the project directory
-cd datdao.github.io/Predict housing prices in the US using R/
+cd "datdao/Predict housing prices in the US using R"
 # Install R packages
-Rscript -e "install.packages(c('[dplyr,forecast,randomForest,caret,psych,caTools,tidyr,xlsx,ggplot2,mice,lmtest,car]'))"
+Rscript -e "install.packages(c('dplyr','forecast','randomForest','caret','psych','caTools','tidyr','xlsx','ggplot2','mice','lmtest','car'), repos='https://cloud.r-project.org')"
 
 # Running the script
 Rscript FinalCode.R
+```
+
+## Limitations
+
+The observations are regional and historical. The model is an educational portfolio artifact, not a current valuation service; any real deployment would need temporal validation, market refreshes, leakage review, uncertainty estimates, and fairness checks.
+
+[← Back to the portfolio](../README.md)
 
 

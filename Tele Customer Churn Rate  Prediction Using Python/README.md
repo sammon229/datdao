@@ -2,6 +2,17 @@
 
 ### Author: Dat Dao
 
+A classification study for identifying customer-retention signals in telecom account and service data.
+
+## Portfolio snapshot
+
+| Item | Detail |
+| --- | --- |
+| Data | 7,043 customers and 21 account, service, and demographic features |
+| Models | Logistic Regression, Random Forest, and Linear Discriminant Analysis |
+| Focus | Preprocessing, feature selection, model comparison, and retention interpretation |
+| Reported result | The original analysis identifies tenure, contract type, and monthly charges as important signals |
+
 ## Introduction
 This project investigates the factors leading to customer churn in the telecom industry. By analyzing customer data, including demographics, service subscriptions, and account details, we aim to develop a model that accurately predicts churn, thereby enabling telecom companies to devise effective retention strategies.
 
@@ -27,22 +38,36 @@ The analysis is based on the Telco Customer Churn dataset from Kaggle, covering 
 The project highlights the criticality of understanding customer behavior and the potential of predictive analytics in crafting targeted retention strategies. It also discusses the ethical considerations in using customer data for predictive purposes.
 
 ## Conclusion
-The findings indicate that factors like tenure, contract type, and monthly charges are pivotal in predicting churn. The Logistic Regression model, in particular, demonstrated high accuracy, making it a valuable tool for telecom companies in their efforts to reduce churn and enhance customer loyalty.
+The findings indicate that tenure, contract type, and monthly charges are pivotal churn signals. Logistic Regression performed strongly in the original analysis, but retention decisions should use calibrated risk and business cost—not accuracy alone.
 
 For a comprehensive analysis and detailed findings, refer to the accompanying documentation and analysis scripts.
 
 ### Requirements:
 - Python 3.8+
-- Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn
+- Libraries: pandas, numpy, scikit-learn, matplotlib, seaborn, jupyter
 
 ### Setup:
 ```bash
 # Clone this repository
-git clone https://github.com/sammon229/datdao/
+git clone https://github.com/sammon229/datdao.git
 # Navigate to the project directory
-cd Tele Customer Churn Rate  Prediction Using Python
+cd "datdao/Tele Customer Churn Rate  Prediction Using Python"
 # Install required Python packages
-pip install -r requirements.txt
+python -m pip install pandas numpy scikit-learn matplotlib seaborn jupyter
 
-# Running the analysis script
-python Customer Churn Rate Prediction using Python.ipynb
+# Open the analysis notebook
+jupyter notebook "Customer Churn Rate Prediction using Python.ipynb"
+```
+
+## Files
+
+- [Analysis notebook](Customer%20Churn%20Rate%20Prediction%20using%20Python.ipynb)
+- [Telco dataset](WA_Fn-UseC_-Telco-Customer-Churn.csv)
+- [Written report](Enhancing%20Customer%20Retention%20in%20Telecom%20Through%20Predictive%20Analytics.docx)
+- [Portfolio image](../images/churn.jpg)
+
+## Limitations
+
+Churn labels, sampling, and contract behavior can change over time. A production retention workflow would need temporal validation, drift monitoring, explainable offers, privacy controls, and fairness review before contacting customers.
+
+[← Back to the portfolio](../README.md)
