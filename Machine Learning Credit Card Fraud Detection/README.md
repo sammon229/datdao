@@ -24,6 +24,8 @@ An imbalanced-classification study for identifying suspicious credit-card transa
 - [Written report](Advanced%20Credit%20Card%20Fraud%20Detection%20System.docx)
 - [Portfolio image](../images/MIT-Fraud-Detection-PRESS_0.jpg)
 
+The source transaction dataset is not redistributed in this repository. Download it from the original source and place it beside the notebook as `creditcard_2023.csv`; the notebook now raises a clear instruction instead of relying on a Kaggle-only path.
+
 ## Reproduce locally
 
 ```powershell

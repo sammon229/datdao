@@ -13,9 +13,15 @@ library(mice)
 library(lmtest)
 library(car)
 
-#Import data
-setwd("C:/Users/danie/OneDrive/Documents/dsc520-DD")
-original.train <- read.csv("Final Data/train.csv", stringsAsFactors=TRUE)
+# Resolve data relative to this project instead of a private workstation path.
+# Run this script from the project directory with: Rscript FinalCode.R
+script_arg <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
+project_dir <- if (length(script_arg)) {
+  dirname(normalizePath(sub("^--file=", "", script_arg[[1]])))
+} else {
+  getwd()
+}
+original.train <- read.csv(file.path(project_dir, "train.csv"), stringsAsFactors=TRUE)
 
 # Check Dataset
 head(original.train)
@@ -30,7 +36,7 @@ modified.train <- original.train %>%
 
 # Import and cleaning the test data with the same steps
 
-original.test <- read.csv("Final Data/test.csv", stringsAsFactors=TRUE)
+original.test <- read.csv(file.path(project_dir, "test.csv"), stringsAsFactors=TRUE)
 colSums(is.na(original.test))
 
 modified.test <- original.test %>%
@@ -38,17 +44,17 @@ modified.test <- original.test %>%
 
 # Now we combine train and test data into 1 file. We can combine using either R or Exel. 
 
-df <- rbind(modified.train, modified.test, stringAsfactors = TRUE)
+df <- rbind(modified.train, modified.test)
 
 # set the file path and name
-file <- "cleaned_data.csv"
+file <- file.path(project_dir, "cleaned_data.csv")
 
 # write the data frame to an csv file
 write.csv(df, file)
 
 
 # Load cleaned dataset
-mydf <- read.csv("Final Data/cleaned_data.csv", stringsAsFactors=TRUE)
+mydf <- read.csv(file, stringsAsFactors=TRUE)
 
 
 #Plot variables appeared to be inficient to use
@@ -95,9 +101,9 @@ summary(completedfcombine)
 
 #As it is time consuming to run Mice , we will save this dataset into a .csv file to use later
 #This avoid running mice repeatedly every time we run this project
-write.csv(completedfcombine, "completedf.csv")
+write.csv(completedfcombine, file.path(project_dir, "completedf.csv"))
 
-completedfcombine <- read.csv("completedf.csv", stringsAsFactors=TRUE)
+completedfcombine <- read.csv(file.path(project_dir, "completedf.csv"), stringsAsFactors=TRUE)
 
 ## MULTIPLE LINEAR REGRESSION AND REGRESSION ASSUMPTION USING ALL VARIABLES
 
@@ -165,7 +171,7 @@ resettest(multiple_reg2, power=2, type="regressor", data = finaldf)
 ## Random Forest 
 
 #import completedcombine data set (to avoid running mice all over again)
-mydf <- read.csv("completedf.csv", header = TRUE, stringsAsFactors = TRUE)
+mydf <- read.csv(file.path(project_dir, "completedf.csv"), header = TRUE, stringsAsFactors = TRUE)
 data <- mydf %>% mutate(across(where(is.numeric), scale))
 #data partition
 #select seed to make the random selection repeatable 
@@ -190,7 +196,7 @@ plot(rf, main = 'Random Forest Error Rate')
 
 #tune mtry
 set.seed(123)
-t<- tuneRF(train[,-73], train[,73],stepFactor = 0.5,
+t<- tuneRF(train[, setdiff(names(train), "SalePrice")], train$SalePrice,stepFactor = 0.5,
            plot = TRUE,
            ntreeTry = 300,
            trace = TRUE,
@@ -200,7 +206,7 @@ print(t)
 #hence, we adjust the original df to 300 trees and 48 variables each split
 set.seed(222)
 rf_new <- randomForest(SalePrice~., data=train, ntree =300,
-                       mtry = 48,
+                       mtry = min(48, ncol(train) - 1),
                        importance = TRUE,
                        proximity = TRUE)
 print(rf_new)

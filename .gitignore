@@ -23,3 +23,5 @@ site/
 coverage/
 *.html~
 *.csv~
+completedf.csv
+stock_data.csv

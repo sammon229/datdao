@@ -50,3 +50,11 @@ The project includes the original interactive Archify HTML diagrams under `proje
 - Large datasets are retained where they are part of the original project story; generated outputs and local runtime files should stay untracked.
 - The AI Agent System demo is explicitly portfolio-safe and does not connect to production Hermes, Mnemosyne, Obsidian, cron stores, credentials, or host telemetry.
 - The repository’s GitHub Pages entry point is a presentation layer. Use the local preview instructions when you want to interact with the dashboard controls.
+
+## Repository validation
+
+Run the dependency-free audit from the repository root to check Python and JavaScript syntax, notebook JSON/code-cell syntax, local links, HTML assets, CSV samples, R-source structure, and DOCX/PPTX/PDF integrity:
+
+```powershell
+python tools\validate_portfolio.py
+```
