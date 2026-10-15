@@ -2,7 +2,7 @@
 
 Selected analytics, automation, machine-learning, and AI systems work.
 
-## BigBoyMission · Mission Control
+## AI Agent System · Mission Control
 
 An interactive local-first command deck for demonstrating multi-agent coordination without exposing a live Hermes installation.
 
@@ -22,7 +22,7 @@ An interactive local-first command deck for demonstrating multi-agent coordinati
 
 ![Unified AI Systems Backend](projects/bigboymission/docs/diagrams/mission-control-unified-architecture.svg)
 
-➡️ [Open the BigBoyMission project](projects/bigboymission/README.md)
+➡️ [Open the AI Agent System project](projects/bigboymission/README.md)
 
 The project includes the original interactive Archify HTML diagrams under `projects/bigboymission/references/` and extracted SVGs so the architecture is visible directly in GitHub.
 

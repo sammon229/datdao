@@ -1,4 +1,4 @@
-# BigBoyMission Portfolio Demo
+# AI Agent System Portfolio Demo
 
 An interactive, local-preview mission-control dashboard for showcasing multi-agent coordination patterns in a GitHub portfolio. It is not a hosted service and does not require a live Hermes installation.
 

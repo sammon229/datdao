@@ -7,7 +7,7 @@
     if(document.querySelector('#architecture-view'))return;
     const local=document.querySelector('.local');local.insertAdjacentHTML('beforebegin','<button class="nav" data-view="architecture">◈ <span>AI Structure</span></button>');
     const footer=document.querySelector('main>footer');footer.insertAdjacentHTML('beforebegin','<section id="architecture-view" class="view architecture-view"><div id="architecture-root"></div></section>');
-    document.title='BigBoyMission · AI Structure';
+    document.title='AI Agent System · AI Structure';
   }
   function taskCard(t){return `<button class="arch-task" data-task="${esc(t.id)}"><b>${esc(t.title)}</b><small>${esc(t.id)} · ${esc(t.assignee||'unassigned')} · ${esc(t.status)}</small></button>`}
   function render(d){

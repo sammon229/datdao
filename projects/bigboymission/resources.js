@@ -1,5 +1,5 @@
 (function(){
-  document.title='BigBoyMission';
+  document.title='AI Agent System';
   const stylesheet=document.createElement('link');stylesheet.rel='stylesheet';stylesheet.href='/resources.css';document.head.appendChild(stylesheet);
   const escText=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const fmtBytes=v=>{const n=Number(v||0);if(!n)return '—';const units=['B','GB','TB'];let x=n,u=0;while(x>=1024*1024*1024&&u<2){x/=1024*1024*1024;u++}return `${x.toFixed(u?1:0)} ${units[u]}`};
