@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 893 1212" role="img" lang="en" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="blueprint" data-quality-profile="showcase" data-node-ui="" data-reader-fit="intrinsic-height" data-reader-min-text="7.5" data-reader-primary-text="14">
+  <style>
+    svg {
+      --grid: #e9edf2; --lane-fill: rgba(248,250,252,.65); --lane-stroke: #cbd5e1;
+      --text: #111827; --text-muted: #5b6474; --text-dim: #9aa3b2; --mask: #fff;
+      --frontend-fill: rgba(34,211,238,.15); --frontend-stroke: #0891b2;
+      --backend-fill: rgba(52,211,153,.18); --backend-stroke: #059669;
+      --database-fill: rgba(167,139,250,.2); --database-stroke: #7c3aed;
+      --cloud-fill: rgba(251,191,36,.18); --cloud-stroke: #d97706;
+      --security-fill: rgba(251,113,133,.15); --security-stroke: #e11d48;
+      --messagebus-fill: rgba(251,146,60,.15); --messagebus-stroke: #ea580c;
+      --external-fill: rgba(148,163,184,.18); --external-stroke: #64748b;
+      --arrow: #64748b; --arrow-emphasis: #059669;
+    }
+    .c-grid { stroke: var(--grid); fill: none; }
+    .c-mask { fill: var(--mask); stroke: none; }
+    .c-lane-rule { stroke: var(--lane-stroke); fill: none; opacity: .7; }
+    .c-lane-wash { fill: var(--lane-fill); stroke: none; }
+    .c-frontend { fill: var(--frontend-fill); stroke: var(--frontend-stroke); }
+    .c-backend { fill: var(--backend-fill); stroke: var(--backend-stroke); }
+    .c-database { fill: var(--database-fill); stroke: var(--database-stroke); }
+    .c-cloud { fill: var(--cloud-fill); stroke: var(--cloud-stroke); }
+    .c-security { fill: var(--security-fill); stroke: var(--security-stroke); }
+    .c-messagebus { fill: var(--messagebus-fill); stroke: var(--messagebus-stroke); }
+    .c-external { fill: var(--external-fill); stroke: var(--external-stroke); }
+    .t-primary { fill: var(--text); } .t-muted { fill: var(--text-muted); } .t-dim { fill: var(--text-dim); }
+    .t-frontend { fill: var(--frontend-stroke); } .t-backend { fill: var(--backend-stroke); }
+    .t-database { fill: var(--database-stroke); } .t-cloud { fill: var(--cloud-stroke); }
+    .t-security { fill: var(--security-stroke); } .t-messagebus { fill: var(--messagebus-stroke); }
+    .t-external { fill: var(--external-stroke); }
+    .t-edge-default { fill: var(--arrow); } .t-edge-emphasis { fill: var(--arrow-emphasis); }
+    .t-edge-security { fill: var(--security-stroke); } .t-edge-dashed { fill: var(--database-stroke); }
+    .a-default { stroke: var(--arrow); fill: none; } .a-emphasis { stroke: var(--arrow-emphasis); fill: none; }
+    .a-security { stroke: var(--security-stroke); fill: none; stroke-dasharray: 5,5; }
+    .a-dashed { stroke: var(--database-stroke); fill: none; stroke-dasharray: 4,4; }
+    .c-security-group { fill: transparent; stroke: var(--security-stroke); stroke-dasharray: 4,4; }
+    .c-region { fill: rgba(251,191,36,.05); stroke: var(--cloud-stroke); stroke-dasharray: 8,4; }
+    .c-lane { fill: var(--lane-fill); stroke: var(--lane-stroke); stroke-dasharray: 6,6; }
+    svg[data-preset="classic"] .c-grid { stroke: transparent; }
+    svg[data-preset="blueprint"] .c-grid { stroke-dasharray: 1 3; opacity: .78; }
+    svg[data-preset="blueprint"] .c-security-group, svg[data-preset="blueprint"] .c-lane { stroke-dasharray: 7 3; }
+  </style>
         <title id="archify-diagram-title">Mission Control · Unified AI Systems Backend</title>
         <desc id="archify-diagram-description">Mission Control UI and API supervising Hermes, MiuMiu, AI Share, Kanban, files, and memory.</desc>
         <!-- Definitions -->
