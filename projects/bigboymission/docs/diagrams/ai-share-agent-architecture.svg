@@ -13,6 +13,15 @@
       --external-fill: rgba(148,163,184,.18); --external-stroke: #64748b;
       --arrow: #64748b; --arrow-emphasis: #059669;
     }
+    svg { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .m-default { fill: var(--arrow); } .m-emphasis { fill: var(--arrow-emphasis); }
+    .m-security { fill: var(--security-stroke); } .m-dashed { fill: var(--database-stroke); }
+    .semantic-sigil { fill: none; stroke: currentColor; stroke-width: 1.35; opacity: .76; pointer-events: none; }
+    .semantic-sigil > * { vector-effect: non-scaling-stroke; }
+    .semantic-sigil .sigil-fill { fill: currentColor; stroke: none; }
+    .s-frontend { color: var(--frontend-stroke); } .s-backend { color: var(--backend-stroke); }
+    .s-database { color: var(--database-stroke); } .s-security { color: var(--security-stroke); }
+    .s-messagebus { color: var(--messagebus-stroke); } .s-external { color: var(--external-stroke); }
     .c-grid { stroke: var(--grid); fill: none; }
     .c-mask { fill: var(--mask); stroke: none; }
     .c-lane-rule { stroke: var(--lane-stroke); fill: none; opacity: .7; }
