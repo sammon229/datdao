@@ -1,0 +1,25 @@
+# Local Python, notebook, and IDE artifacts
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.env
+.env.*
+.idea/
+.vscode/
+
+# Local Mission Control demo state and server output
+demo-backups/
+*.log
+*.sqlite3
+*.db
+
+# Generated analysis output
+dist/
+build/
+site/
+coverage/
+*.html~
+*.csv~

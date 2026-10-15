@@ -1,4 +1,4 @@
-"""BigBoyMission portfolio demo server.
+"""AI Agent System portfolio demo server.
 
 This server intentionally uses deterministic in-memory demo data. It never
 reads a Hermes installation, a real database, credentials, cron files, or
@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import copy
 import json
+import mimetypes
 import os
 import time
 from datetime import datetime, timedelta, timezone
@@ -16,12 +17,20 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+try:
+    from zoneinfo import ZoneInfo
+except ImportError:  # pragma: no cover - Python 3.8 fallback
+    ZoneInfo = None
+
 
 ROOT = Path(__file__).resolve().parent
 REFERENCES = ROOT / "references"
 HOST = os.environ.get("MISSION_CONTROL_HOST", "127.0.0.1")
 PORT = int(os.environ.get("MISSION_CONTROL_PORT", "8765"))
-DEMO_TZ = timezone(timedelta(hours=-5))
+try:
+    DEMO_TZ = ZoneInfo("America/Chicago") if ZoneInfo else timezone(timedelta(hours=-5))
+except Exception:  # pragma: no cover - Windows without bundled tzdata
+    DEMO_TZ = timezone(timedelta(hours=-5))
 
 
 def stamp(hours_ago=0, minutes_ago=0):
@@ -198,8 +207,11 @@ class Handler(BaseHTTPRequestHandler):
         if parsed.path == "/reference/ai-share-agent-architecture.html": return self.send_file(REFERENCES / "ai-share-agent-architecture.html", "text/html; charset=utf-8")
         if parsed.path == "/reference/mission-control-unified-architecture.html": return self.send_file(REFERENCES / "mission-control-unified-architecture.html", "text/html; charset=utf-8")
         target = ROOT / ("index.html" if parsed.path == "/" else parsed.path.lstrip("/"))
-        if target.is_file() and ROOT in target.resolve().parents and target.suffix in (".html", ".css", ".js"):
-            return self.send_file(target, "text/html; charset=utf-8" if target.suffix == ".html" else "text/css; charset=utf-8" if target.suffix == ".css" else "application/javascript; charset=utf-8")
+        allowed = {".html", ".css", ".js", ".svg", ".png", ".jpg", ".jpeg", ".webp", ".ico", ".json", ".woff", ".woff2", ".ttf"}
+        resolved = target.resolve()
+        if target.is_file() and ROOT in resolved.parents and target.suffix.lower() in allowed:
+            content_type = mimetypes.guess_type(target.name)[0] or "application/octet-stream"
+            return self.send_file(target, f"{content_type}; charset=utf-8" if content_type.startswith(("text/", "application/javascript")) else content_type)
         return self.send_json({"error": "not found"}, 404)
 
     def send_file(self, path, content_type):
@@ -250,5 +262,5 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    print(f"BigBoyMission portfolio demo running at http://{HOST}:{PORT}")
+    print(f"AI Agent System portfolio demo running at http://{HOST}:{PORT}")
     ThreadingHTTPServer((HOST, PORT), Handler).serve_forever()

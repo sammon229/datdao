@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Agent System portfolio showcase: a local-first mission control concept for multi-agent coordination.">
+  <title>AI Agent System · Portfolio Showcase</title>
+  <style>
+    :root{color-scheme:light;--ink:#17324a;--muted:#60768d;--line:#d8e5ef;--surface:#fff;--wash:#f4f8fb;--blue:#1277a7;--green:#138b70;--orange:#d47721;--shadow:0 18px 50px rgba(24,58,87,.10)}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(150deg,#eef6fb,#f8fafc 48%,#eef5f2);color:var(--ink);font:15px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--blue)}.page{width:min(1180px,calc(100% - 32px));margin:32px auto 64px}.hero,.diagram,.card,.footer{background:rgba(255,255,255,.90);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.hero{padding:42px 46px;display:flex;justify-content:space-between;gap:32px;align-items:flex-end}.eyebrow{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-size:clamp(30px,5vw,58px);line-height:1.05;letter-spacing:-.04em;margin:12px 0 14px}.hero p{max-width:680px;color:var(--muted);font-size:17px;margin:0}.actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.button{display:inline-flex;align-items:center;justify-content:center;border-radius:11px;padding:10px 15px;text-decoration:none;font-weight:750;border:1px solid var(--line);background:#fff;color:var(--ink)}.button.primary{background:#15384f;border-color:#15384f;color:#fff}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}.stat{padding:17px 18px;background:var(--surface);border:1px solid var(--line);border-radius:15px}.stat b{display:block;color:var(--blue);font-size:24px}.stat span{color:var(--muted);font-size:13px}.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin:36px 4px 14px}.section-head h2{margin:0;font-size:25px;letter-spacing:-.03em}.section-head p{margin:0;color:var(--muted)}.diagram{padding:15px;overflow:hidden}.diagram img{display:block;width:100%;height:auto;border-radius:14px;background:#fff}.caption{display:flex;justify-content:space-between;gap:16px;padding:14px 4px 2px;color:var(--muted);font-size:13px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{padding:22px}.card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;color:var(--muted)}.card ul{margin:12px 0 0;padding-left:18px;color:var(--muted)}.card li+li{margin-top:5px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;background:var(--blue)}.green .dot{background:var(--green)}.orange .dot{background:var(--orange)}.footer{margin-top:18px;padding:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:13px}.footer strong{color:var(--ink)}@media(max-width:760px){.page{width:min(100% - 20px,1180px);margin-top:10px}.hero{padding:28px 24px;display:block}.actions{justify-content:flex-start;margin-top:22px}.stats,.cards{grid-template-columns:1fr 1fr}.caption{display:block}.caption a{display:inline-block;margin-top:4px}}@media(max-width:460px){.stats,.cards{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Portfolio case study · local-first systems</div>
+        <h1>AI Agent System</h1>
+        <p>A portfolio-safe mission control concept for coordinating Hermes workers, an external engineering orchestrator, Kanban ownership, AI Share task state, and durable knowledge surfaces.</p>
+      </div>
+      <nav class="actions" aria-label="Project links">
+        <a class="button primary" href="README.md">Project documentation</a>
+        <a class="button" href="../../">Back to portfolio</a>
+      </nav>
+    </section>
+
+    <section class="stats" aria-label="Project facts">
+      <div class="stat"><b>1</b><span>canonical task identity</span></div>
+      <div class="stat"><b>4</b><span>AI Share task lanes</span></div>
+      <div class="stat"><b>11</b><span>demo fleet profiles</span></div>
+      <div class="stat"><b>0</b><span>production credentials</span></div>
+    </section>
+
+    <div class="section-head"><div><div class="eyebrow">Architecture</div><h2>AI Share Agent Architecture</h2></div><p>Canonical coordination view</p></div>
+    <section class="diagram">
+      <img src="docs/diagrams/ai-share-agent-architecture.svg" alt="Architecture diagram showing Dat Dao, BigBoy, MiuMiu, AI Share, the Hermes Agent Fleet, Kanban, Mnemosyne, and Obsidian">
+      <div class="caption"><span>Dat Dao remains final authority; BigBoy and MiuMiu synchronize through AI Share using the same task_id.</span><a href="references/ai-share-agent-architecture.html">Open interactive Archify source ↗</a></div>
+    </section>
+
+    <div class="section-head"><div><div class="eyebrow">Backend model</div><h2>Unified AI Systems Backend</h2></div><p>Execution, storage, and evidence</p></div>
+    <section class="diagram">
+      <img src="docs/diagrams/mission-control-unified-architecture.svg" alt="Unified backend architecture diagram showing Mission Control, Hermes, AI Share, profile files, databases, and memory">
+      <div class="caption"><span>Operational state is separated from durable memory and human-readable knowledge.</span><a href="references/mission-control-unified-architecture.html">Open interactive Archify source ↗</a></div>
+    </section>
+
+    <div class="section-head"><div><div class="eyebrow">What this demonstrates</div><h2>Designed for an operator’s point of view</h2></div></div>
+    <section class="cards">
+      <article class="card"><h3><span class="dot"></span>Coordination</h3><p>One task_id connects Inbox, Outbox, Status, and Results so handoffs remain traceable across orchestrators.</p><ul><li>Dat Dao: owner and final authority</li><li>BigBoy: Hermes executive orchestration</li><li>MiuMiu: external engineering orchestration</li></ul></article>
+      <article class="card green"><h3><span class="dot"></span>Operations</h3><p>The local demo turns system concepts into inspectable operator workflows rather than a static mockup.</p><ul><li>Kanban work ownership and task detail</li><li>Agent status, hierarchy, cron, and runtime evidence</li><li>Explicit [user-input] recovery path</li></ul></article>
+      <article class="card orange"><h3><span class="dot"></span>Safety boundary</h3><p>The public portfolio clone is intentionally disconnected from live Hermes, Mnemosyne, Obsidian, credentials, and machine telemetry.</p><ul><li>Deterministic in-memory demo data</li><li>Local Python preview server</li><li>Public SVG diagrams for GitHub rendering</li></ul></article>
+    </section>
+
+    <footer class="footer"><span><strong>AI Agent System</strong> · Dat Dao portfolio</span><span>Use <code>python server.py</code> inside this folder for the interactive local demo.</span></footer>
+  </main>
+</body>
+</html>
