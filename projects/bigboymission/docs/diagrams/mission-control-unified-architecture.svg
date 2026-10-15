@@ -1,4 +1,5 @@
-<svg viewBox="0 0 893 1212" role="img" lang="en" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="blueprint" data-quality-profile="showcase" data-node-ui="" data-reader-fit="intrinsic-height" data-reader-min-text="7.5" data-reader-primary-text="14">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 893 1212" role="img" lang="en" aria-labelledby="archify-diagram-title archify-diagram-description" data-animation="trace" data-preset="blueprint" data-quality-profile="showcase" data-node-ui="" data-reader-fit="intrinsic-height" data-reader-min-text="7.5" data-reader-primary-text="14">
         <title id="archify-diagram-title">Mission Control · Unified AI Systems Backend</title>
         <desc id="archify-diagram-description">Mission Control UI and API supervising Hermes, MiuMiu, AI Share, Kanban, files, and memory.</desc>
         <!-- Definitions -->
