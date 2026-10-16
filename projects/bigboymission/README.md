@@ -19,6 +19,12 @@ Open [showcase.html](showcase.html) for the GitHub-friendly presentation. It inc
 
 ## Architecture gallery
 
+### Mission Control product view
+
+![Mission Control demo overview](../../images/mission-control-overview.png)
+
+The screenshot is captured from the deterministic portfolio demo. It shows the operator-facing overview without exposing live Hermes tasks, credentials, local memory, or host telemetry.
+
 The portfolio includes the actual Archify diagrams as SVG assets so GitHub renders the system visually in the repository. The original interactive Archify HTML is preserved beside each visual asset for local exploration.
 
 ### AI Share Agent Architecture
