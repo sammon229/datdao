@@ -33,9 +33,9 @@ The project includes the original interactive Archify HTML diagrams under `proje
 
 ## Visual project gallery
 
-The other portfolio projects now have a visual case-study page with their existing images, repository-backed dataset counts, reported results, methods, and direct links to the original README or notebook. This keeps the source documentation intact while making the evidence easier to scan:
+The other portfolio projects now have individual visual detail pages with their existing images, repository-backed dataset counts, reported results, methods, findings, limitations, and direct links to the original README or notebook. This keeps the source documentation intact while making each project understandable before opening raw Markdown:
 
-➡️ [Open the visual project gallery](projects/showcase.html)
+➡️ [Open the visual project index](projects/showcase.html) · Project cards on the [main portfolio](index.html#work) open their own visual detail page.
 
 ## Project map
 
