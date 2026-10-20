@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" role="img" aria-labelledby="title desc">
+  <title id="title">Price by property grade</title>
+  <desc id="desc">Computed from 21,613 King County sales; median price for grades with at least 100 sales.</desc>
+  <rect width="840" height="420" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Price by property grade</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Computed from 21,613 King County sales; median price for grades with at least 100 sales.</text>
+  <text x="56" y="94" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">MEDIAN PRICE</text>
+  <line x1="56" y1="350" x2="784" y2="350" stroke="#cbd5e1"/>
+  <rect x="74.7" y="307.6" width="66.6" height="42.4" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="108.0" y="297.6" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$229K</text>
+  <text x="108.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">G5</text>
+  <rect x="178.7" y="299.0" width="66.6" height="51.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="212.0" y="289.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$275K</text>
+  <text x="212.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">G6</text>
+  <rect x="282.7" y="280.5" width="66.6" height="69.5" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="316.0" y="270.5" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$375K</text>
+  <text x="316.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">G7</text>
+  <rect x="386.7" y="255.5" width="66.6" height="94.5" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="420.0" y="245.5" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$510K</text>
+  <text x="420.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">G8</text>
+  <rect x="490.7" y="216.5" width="66.6" height="133.5" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="524.0" y="206.5" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$720K</text>
+  <text x="524.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">G9</text>
+  <rect x="594.7" y="180.5" width="66.6" height="169.5" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="628.0" y="170.5" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$914K</text>
+  <text x="628.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">G10</text>
+  <rect x="698.7" y="112.0" width="66.6" height="238.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="732.0" y="102.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$1284K</text>
+  <text x="732.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">G11</text>
+</svg>

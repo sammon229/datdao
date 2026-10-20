@@ -32,7 +32,7 @@ The analysis is based on the Telco Customer Churn dataset from Kaggle, covering 
 - **Data Preprocessing**: Cleaning data, handling missing values, and converting variables to appropriate data types.
 - **Feature Selection**: Removing low-correlation features to prevent overfitting and improve model performance.
 - **Model Training**: Applying Logistic Regression, Random Forest, and LDA models to the preprocessed data.
-- **Performance Evaluation**: Assessing model accuracy and identifying key predictors of churn.
+- **Performance Evaluation**: Comparing accuracy, balanced accuracy, precision, recall, F1, and class-aware cross-validation rather than optimizing accuracy alone.
 
 ## Implications
 The project highlights the criticality of understanding customer behavior and the potential of predictive analytics in crafting targeted retention strategies. It also discusses the ethical considerations in using customer data for predictive purposes.

@@ -21,6 +21,11 @@ project_dir <- if (length(script_arg)) {
 } else {
   getwd()
 }
+
+required_files <- file.path(project_dir, c("train.csv", "test.csv"))
+if (!all(file.exists(required_files))) {
+  stop("Run this script from the project with train.csv and test.csv present.")
+}
 original.train <- read.csv(file.path(project_dir, "train.csv"), stringsAsFactors=TRUE)
 
 # Check Dataset

@@ -18,6 +18,10 @@ An imbalanced-classification study for identifying suspicious credit-card transa
 - Review feature relevance rather than presenting the model as an opaque decision-maker.
 - Use cross-validation to reduce the risk of a single favorable split driving the conclusion.
 
+The notebook keeps scaling inside the model pipeline, stratifies the holdout,
+uses average precision for tuning, and avoids the removed
+`max_features='auto'` setting.
+
 ## Files
 
 - [Analysis notebook](Credit%20Card%20Fraud.ipynb)

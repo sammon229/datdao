@@ -131,6 +131,7 @@ const projects = {
 
 const key = new URLSearchParams(window.location.search).get("project") || "fraud";
 const project = projects[key];
+const extra = (window.evidenceData && window.evidenceData[key]) || null;
 const root = document.querySelector("#project-root");
 
 if (!project) {
@@ -153,6 +154,7 @@ if (!project) {
         <figure class="hero-visual"><img src="${project.image}" alt="${project.alt}" width="900" height="560"><figcaption>Visual support · project artifact / analysis context</figcaption></figure>
       </section>
       <section class="metric-band" aria-label="Project metrics">${project.metrics.map(([value, label]) => `<div class="metric"><strong>${value}</strong><span>${label}</span></div>`).join("")}</section>
+      ${extra ? `<section class="evidence-visual" aria-labelledby="visual-title"><div class="evidence-visual-head"><div><p class="eyebrow">Run output / evidence</p><h2 id="visual-title">Visual support for the thesis</h2></div><span class="evidence-kind">${extra.kind}</span></div><figure class="evidence-chart"><img src="${extra.image}" alt="${extra.alt}" width="840" height="420" loading="lazy"><figcaption>${extra.caption}</figcaption></figure></section>` : ""}
       <section class="detail-grid" aria-label="Project evidence and interpretation">
         <article class="detail-card detail-card-wide"><p class="eyebrow">The question</p><h2>What this project is trying to answer</h2><p>${project.question}</p><div class="method-row">${project.methods.map((method) => `<span class="method">${method}</span>`).join("")}</div><div class="source-note"><strong>Why the visual helps:</strong> the image gives the project a concrete starting point, while the metric band anchors the explanation in the data and evaluation choices.</div></article>
         <article class="detail-card"><p class="eyebrow">Evidence</p><h2>What is in the repository</h2><ul class="evidence-list">${project.evidence.map((item) => `<li>${item}</li>`).join("")}</ul></article>

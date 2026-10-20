@@ -8,7 +8,7 @@ Exploratory analysis of residential properties in Ames, Iowa, with a focus on th
 | --- | --- |
 | Question | Which property characteristics are most associated with SalePrice? |
 | Data | Ames residential sales with property, quality, location, and sale fields |
-| Tools | Python, pandas, NumPy, seaborn, matplotlib, statsmodels |
+| Tools | Python, pandas, NumPy, SciPy, seaborn, matplotlib, statsmodels |
 | Approach | Cleaning, exploratory analysis, correlation review, and regression diagnostics |
 | Reported result | The original analysis reports an R-squared of approximately 45.2% for its regression specification |
 
@@ -32,7 +32,7 @@ git clone https://github.com/sammon229/datdao.git
 Set-Location "datdao/Data exploration and analysis using Python for residential properties in Ames, Iowa"
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-python -m pip install numpy pandas matplotlib seaborn statsmodels jupyter
+python -m pip install numpy pandas scipy matplotlib seaborn statsmodels jupyter
 jupyter notebook "Data Exploreation and Analysis Ames,Iowa.ipynb"
 ```
 

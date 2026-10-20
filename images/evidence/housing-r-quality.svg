@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" role="img" aria-labelledby="title desc">
+  <title id="title">Sale price rises with quality</title>
+  <desc id="desc">Training split from the Ames data; mean SalePrice by OverallQual.</desc>
+  <rect width="840" height="420" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Sale price rises with quality</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Training split from the Ames data; mean SalePrice by OverallQual.</text>
+  <text x="56" y="94" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">MEAN SALE PRICE</text>
+  <line x1="56" y1="350" x2="784" y2="350" stroke="#cbd5e1"/>
+  <rect x="79.7" y="279.8" width="74.0" height="70.2" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="116.7" y="269.8" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$108K</text>
+  <text x="116.7" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">Q4</text>
+  <rect x="201.0" y="263.5" width="74.0" height="86.5" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="238.0" y="253.5" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$134K</text>
+  <text x="238.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">Q5</text>
+  <rect x="322.3" y="245.3" width="74.0" height="104.7" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="359.3" y="235.3" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$162K</text>
+  <text x="359.3" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">Q6</text>
+  <rect x="443.7" y="215.5" width="74.0" height="134.5" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="480.7" y="205.5" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$208K</text>
+  <text x="480.7" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">Q7</text>
+  <rect x="565.0" y="172.1" width="74.0" height="177.9" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="602.0" y="162.1" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$275K</text>
+  <text x="602.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">Q8</text>
+  <rect x="686.3" y="112.0" width="74.0" height="238.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="723.3" y="102.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$368K</text>
+  <text x="723.3" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">Q9</text>
+</svg>

@@ -64,3 +64,25 @@ Run the dependency-free audit from the repository root to check Python and JavaS
 ```powershell
 python tools\validate_portfolio.py
 ```
+
+## Reproducible portfolio evidence
+
+The visual project pages are backed by repository data, not invented sample
+numbers. Refresh the charts after changing source data with:
+
+```powershell
+python tools\generate_portfolio_evidence.py
+```
+
+The notebook repair pass is explicit and repeatable. It removes leakage,
+cleans missing values, uses class-aware evaluation, fixes unsupported model
+parameters, and keeps forecast metrics in comparable units:
+
+```powershell
+python tools\repair_portfolio_notebooks.py
+python tools\validate_portfolio.py
+```
+
+Projects whose source data is not redistributed, such as fraud detection and
+Yahoo Finance forecasting, label method evidence instead of presenting an
+unverified model score.
