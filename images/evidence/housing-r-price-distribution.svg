@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ames sale-price distribution</title>
+  <desc id="desc">Training split from the R project; distribution of SalePrice values.</desc>
+  <rect width="840" height="420" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Ames sale-price distribution</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Training split from the R project; distribution of SalePrice values.</text>
+  <text x="56" y="94" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">NUMBER OF SALES</text>
+  <line x1="56" y1="350" x2="784" y2="350" stroke="#cbd5e1"/>
+  <rect x="72.4" y="260.3" width="58.2" height="89.7" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="101.5" y="250.3" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">301</text>
+  <text x="101.5" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">34.9K–124.9K</text>
+  <rect x="163.4" y="112.0" width="58.2" height="238.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="192.5" y="102.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">799</text>
+  <text x="192.5" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">124.9K–214.9K</text>
+  <rect x="254.4" y="275.5" width="58.2" height="74.5" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="283.5" y="265.5" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">250</text>
+  <text x="283.5" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">214.9K–304.9K</text>
+  <rect x="345.4" y="326.2" width="58.2" height="23.8" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="374.5" y="316.2" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">80</text>
+  <text x="374.5" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">304.9K–394.9K</text>
+  <rect x="436.4" y="344.0" width="58.2" height="6.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="465.5" y="334.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">20</text>
+  <text x="465.5" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">394.9K–485.0K</text>
+  <rect x="527.4" y="345.0" width="58.2" height="5.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="556.5" y="335.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">5</text>
+  <text x="556.5" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">485.0K–575.0K</text>
+  <rect x="618.4" y="345.0" width="58.2" height="5.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="647.5" y="335.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">3</text>
+  <text x="647.5" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">575.0K–665.0K</text>
+  <rect x="709.4" y="345.0" width="58.2" height="5.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="738.5" y="335.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">2</text>
+  <text x="738.5" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">665.0K–755.0K</text>
+</svg>

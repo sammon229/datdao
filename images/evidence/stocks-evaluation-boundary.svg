@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" role="img" aria-labelledby="title desc">
+  <title id="title">Forecast evaluation boundary</title>
+  <desc id="desc">The repaired notebook evaluates ARIMA and LSTM forecasts in the same raw-price units.</desc>
+  <rect width="840" height="420" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Forecast evaluation boundary</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">The repaired notebook evaluates ARIMA and LSTM forecasts in the same raw-price units.</text>
+  <rect x="40.0" y="142" width="132.8" height="92" rx="14" fill="#ffffff" stroke="#9db4d0" stroke-width="2"/>
+  <text x="106.4" y="177" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="14" font-weight="700">Chronological</text>
+  <text x="106.4" y="201" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">last 5 days</text>
+  <path d="M 180.8 188.0 H 188.8" stroke="#2165d6" stroke-width="3" fill="none"/>
+  <path d="M 188.8 188.0 l -9 -6 v 12 z" fill="#2165d6"/>
+  <rect x="196.8" y="142" width="132.8" height="92" rx="14" fill="#ffffff" stroke="#9db4d0" stroke-width="2"/>
+  <text x="263.20000000000005" y="177" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="14" font-weight="700">ARIMA</text>
+  <text x="263.20000000000005" y="201" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">price forecast</text>
+  <path d="M 337.6 188.0 H 345.6" stroke="#2165d6" stroke-width="3" fill="none"/>
+  <path d="M 345.6 188.0 l -9 -6 v 12 z" fill="#2165d6"/>
+  <rect x="353.6" y="142" width="132.8" height="92" rx="14" fill="#ffffff" stroke="#9db4d0" stroke-width="2"/>
+  <text x="420.0" y="177" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="14" font-weight="700">LSTM</text>
+  <text x="420.0" y="201" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">inverse diff</text>
+  <path d="M 494.40000000000003 188.0 H 502.40000000000003" stroke="#2165d6" stroke-width="3" fill="none"/>
+  <path d="M 502.40000000000003 188.0 l -9 -6 v 12 z" fill="#2165d6"/>
+  <rect x="510.40000000000003" y="142" width="132.8" height="92" rx="14" fill="#ffffff" stroke="#9db4d0" stroke-width="2"/>
+  <text x="576.8000000000001" y="177" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="14" font-weight="700">MSE</text>
+  <text x="576.8000000000001" y="201" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">same units</text>
+  <path d="M 651.2 188.0 H 659.2" stroke="#2165d6" stroke-width="3" fill="none"/>
+  <path d="M 659.2 188.0 l -9 -6 v 12 z" fill="#2165d6"/>
+  <rect x="667.2" y="142" width="132.8" height="92" rx="14" fill="#ffffff" stroke="#9db4d0" stroke-width="2"/>
+  <text x="733.6" y="177" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="14" font-weight="700">Caution</text>
+  <text x="733.6" y="201" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">not advice</text>
+  <rect x="40" y="286" width="760" height="74" rx="12" fill="#edf7f3"/>
+  <text x="60" y="317" fill="#12775b" font-family="Arial, sans-serif" font-size="13" font-weight="700">External Yahoo Finance history is required before these model outputs can be regenerated.</text>
+  <text x="60" y="341" fill="#5f6e84" font-family="Arial, sans-serif" font-size="12">This visual distinguishes a reproducible method map from a measured model result.</text>
+</svg>

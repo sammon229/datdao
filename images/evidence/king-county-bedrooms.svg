@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" role="img" aria-labelledby="title desc">
+  <title id="title">Price by bedroom count</title>
+  <desc id="desc">Median price for bedroom groups with at least 100 King County sales.</desc>
+  <rect width="840" height="420" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Price by bedroom count</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Median price for bedroom groups with at least 100 King County sales.</text>
+  <text x="56" y="94" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">MEDIAN PRICE</text>
+  <line x1="56" y1="350" x2="784" y2="350" stroke="#cbd5e1"/>
+  <rect x="79.7" y="240.5" width="74.0" height="109.5" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="116.7" y="230.5" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$299K</text>
+  <text x="116.7" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1 BR</text>
+  <rect x="201.0" y="213.1" width="74.0" height="136.9" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="238.0" y="203.1" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$374K</text>
+  <text x="238.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">2 BR</text>
+  <rect x="322.3" y="198.8" width="74.0" height="151.2" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="359.3" y="188.8" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$413K</text>
+  <text x="359.3" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">3 BR</text>
+  <rect x="443.7" y="148.6" width="74.0" height="201.4" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="480.7" y="138.6" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$550K</text>
+  <text x="480.7" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">4 BR</text>
+  <rect x="565.0" y="123.0" width="74.0" height="227.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="602.0" y="113.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$620K</text>
+  <text x="602.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">5 BR</text>
+  <rect x="686.3" y="112.0" width="74.0" height="238.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="723.3" y="102.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$650K</text>
+  <text x="723.3" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">6 BR</text>
+</svg>

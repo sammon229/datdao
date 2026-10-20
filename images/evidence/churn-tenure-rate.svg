@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" role="img" aria-labelledby="title desc">
+  <title id="title">Churn rate by tenure</title>
+  <desc id="desc">Shorter tenure bands carry the clearest early-retention signal.</desc>
+  <rect width="840" height="420" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Churn rate by tenure</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Shorter tenure bands carry the clearest early-retention signal.</text>
+  <text x="56" y="94" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">CHURN RATE (%)</text>
+  <line x1="56" y1="350" x2="784" y2="350" stroke="#cbd5e1"/>
+  <rect x="91.8" y="112.0" width="74.0" height="238.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="128.8" y="102.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">47.4%</text>
+  <text x="128.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">0–12</text>
+  <rect x="237.4" y="206.0" width="74.0" height="144.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="274.4" y="196.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">28.7%</text>
+  <text x="274.4" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">13–24</text>
+  <rect x="383.0" y="247.7" width="74.0" height="102.3" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="420.0" y="237.7" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">20.4%</text>
+  <text x="420.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">25–48</text>
+  <rect x="528.6" y="277.6" width="74.0" height="72.4" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="565.6" y="267.6" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">14.4%</text>
+  <text x="565.6" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">49–60</text>
+  <rect x="674.2" y="316.8" width="74.0" height="33.2" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="711.2" y="306.8" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">6.6%</text>
+  <text x="711.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">61–72</text>
+</svg>

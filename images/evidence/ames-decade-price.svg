@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" role="img" aria-labelledby="title desc">
+  <title id="title">SalePrice by build decade</title>
+  <desc id="desc">Mean SalePrice grouped by the home&#x27;s build decade.</desc>
+  <rect width="840" height="420" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">SalePrice by build decade</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Mean SalePrice grouped by the home&#x27;s build decade.</text>
+  <text x="56" y="94" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">MEAN SALE PRICE</text>
+  <line x1="56" y1="350" x2="784" y2="350" stroke="#cbd5e1"/>
+  <rect x="64.2" y="345.0" width="29.1" height="5.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="78.8" y="335.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$0K</text>
+  <text x="78.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">0s</text>
+  <rect x="109.7" y="215.4" width="29.1" height="134.6" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="124.2" y="205.4" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$134K</text>
+  <text x="124.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1870s</text>
+  <rect x="155.2" y="171.2" width="29.1" height="178.8" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="169.8" y="161.2" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$177K</text>
+  <text x="169.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1880s</text>
+  <rect x="200.7" y="153.2" width="29.1" height="196.8" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="215.2" y="143.2" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$195K</text>
+  <text x="215.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1890s</text>
+  <rect x="246.2" y="185.9" width="29.1" height="164.1" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="260.8" y="175.9" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$163K</text>
+  <text x="260.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1900s</text>
+  <rect x="291.7" y="194.8" width="29.1" height="155.2" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="306.2" y="184.8" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$154K</text>
+  <text x="306.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1910s</text>
+  <rect x="337.2" y="200.0" width="29.1" height="150.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="351.8" y="190.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$149K</text>
+  <text x="351.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1920s</text>
+  <rect x="382.7" y="187.9" width="29.1" height="162.1" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="397.2" y="177.9" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$161K</text>
+  <text x="397.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1930s</text>
+  <rect x="428.2" y="199.3" width="29.1" height="150.7" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="442.8" y="189.3" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$149K</text>
+  <text x="442.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1940s</text>
+  <rect x="473.7" y="186.8" width="29.1" height="163.2" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="488.2" y="176.8" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$162K</text>
+  <text x="488.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1950s</text>
+  <rect x="519.2" y="179.1" width="29.1" height="170.9" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="533.8" y="169.1" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$170K</text>
+  <text x="533.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1960s</text>
+  <rect x="564.7" y="183.9" width="29.1" height="166.1" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="579.2" y="173.9" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$165K</text>
+  <text x="579.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1970s</text>
+  <rect x="610.2" y="166.3" width="29.1" height="183.7" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="624.8" y="156.3" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$182K</text>
+  <text x="624.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1980s</text>
+  <rect x="655.7" y="143.7" width="29.1" height="206.3" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="670.2" y="133.7" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$205K</text>
+  <text x="670.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">1990s</text>
+  <rect x="701.2" y="138.4" width="29.1" height="211.6" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="715.8" y="128.4" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$210K</text>
+  <text x="715.8" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">2000s</text>
+  <rect x="746.7" y="112.0" width="29.1" height="238.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="761.2" y="102.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$236K</text>
+  <text x="761.2" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">2010s</text>
+</svg>

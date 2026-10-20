@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 350" role="img" aria-labelledby="title desc">
+  <title id="title">Average text length by category</title>
+  <desc id="desc">Mean combined description and requirement word count for the most common categories.</desc>
+  <rect width="840" height="350" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Average text length by category</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Mean combined description and requirement word count for the most common categories.</text>
+  <text x="56" y="102" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">MEAN WORD COUNT</text>
+  <text x="56" y="142" fill="#172033" font-family="Arial, sans-serif" font-size="12">Data Scientist</text>
+  <rect x="250" y="126" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="126" width="304.5" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="140" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">319</text>
+  <text x="56" y="174" fill="#172033" font-family="Arial, sans-serif" font-size="12">Software Developer</text>
+  <rect x="250" y="158" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="158" width="207.4" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="172" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">217</text>
+  <text x="56" y="206" fill="#172033" font-family="Arial, sans-serif" font-size="12">Business Analyst</text>
+  <rect x="250" y="190" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="190" width="500.0" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="204" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">523</text>
+  <text x="56" y="238" fill="#172033" font-family="Arial, sans-serif" font-size="12">Cloud</text>
+  <rect x="250" y="222" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="222" width="257.7" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="236" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">270</text>
+  <text x="56" y="270" fill="#172033" font-family="Arial, sans-serif" font-size="12">HR</text>
+  <rect x="250" y="254" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="254" width="253.5" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="268" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">265</text>
+  <text x="56" y="302" fill="#172033" font-family="Arial, sans-serif" font-size="12">UI/UX</text>
+  <rect x="250" y="286" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="286" width="184.6" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="300" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">193</text>
+</svg>

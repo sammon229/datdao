@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 414" role="img" aria-labelledby="title desc">
+  <title id="title">Revenue by country</title>
+  <desc id="desc">Approximate line revenue from Quantity × UnitPrice for the eight largest countries.</desc>
+  <rect width="840" height="414" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Revenue by country</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Approximate line revenue from Quantity × UnitPrice for the eight largest countries.</text>
+  <text x="56" y="102" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">LINE REVENUE</text>
+  <text x="56" y="142" fill="#172033" font-family="Arial, sans-serif" font-size="12">United Kingdom</text>
+  <rect x="250" y="126" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="126" width="500.0" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="140" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">8.2M</text>
+  <text x="56" y="174" fill="#172033" font-family="Arial, sans-serif" font-size="12">Netherlands</text>
+  <rect x="250" y="158" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="158" width="17.4" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="172" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">284.7K</text>
+  <text x="56" y="206" fill="#172033" font-family="Arial, sans-serif" font-size="12">EIRE</text>
+  <rect x="250" y="190" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="190" width="16.1" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="204" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">263.3K</text>
+  <text x="56" y="238" fill="#172033" font-family="Arial, sans-serif" font-size="12">Germany</text>
+  <rect x="250" y="222" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="222" width="13.5" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="236" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">221.7K</text>
+  <text x="56" y="270" fill="#172033" font-family="Arial, sans-serif" font-size="12">France</text>
+  <rect x="250" y="254" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="254" width="12.1" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="268" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">197.4K</text>
+  <text x="56" y="302" fill="#172033" font-family="Arial, sans-serif" font-size="12">Australia</text>
+  <rect x="250" y="286" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="286" width="8.4" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="300" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">137.1K</text>
+  <text x="56" y="334" fill="#172033" font-family="Arial, sans-serif" font-size="12">Switzerland</text>
+  <rect x="250" y="318" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="318" width="8.0" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="332" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">56.4K</text>
+  <text x="56" y="366" fill="#172033" font-family="Arial, sans-serif" font-size="12">Spain</text>
+  <rect x="250" y="350" width="500" height="18" rx="9" fill="#e8eef5"/>
+  <rect x="250" y="350" width="8.0" height="18" rx="9" fill="#12775b" opacity=".88"/>
+  <text x="770" y="364" text-anchor="end" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">54.8K</text>
+</svg>

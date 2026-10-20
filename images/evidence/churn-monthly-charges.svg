@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" role="img" aria-labelledby="title desc">
+  <title id="title">Monthly charges by churn label</title>
+  <desc id="desc">Mean monthly charge in the repository data; a context signal, not a causal claim.</desc>
+  <rect width="840" height="420" rx="20" fill="#f8fafc"/>
+  <text x="36" y="42" fill="#172033" font-family="Arial, sans-serif" font-size="22" font-weight="700">Monthly charges by churn label</text>
+  <text x="36" y="68" fill="#5f6e84" font-family="Arial, sans-serif" font-size="13">Mean monthly charge in the repository data; a context signal, not a causal claim.</text>
+  <text x="56" y="94" fill="#2165d6" font-family="Arial, sans-serif" font-size="12" font-weight="700">MEAN MONTHLY CHARGE</text>
+  <line x1="56" y1="350" x2="784" y2="350" stroke="#cbd5e1"/>
+  <rect x="201.0" y="154.1" width="74.0" height="195.9" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="238.0" y="144.1" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$61</text>
+  <text x="238.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">Stayed</text>
+  <rect x="565.0" y="112.0" width="74.0" height="238.0" rx="7" fill="#2165d6" opacity=".88"/>
+  <text x="602.0" y="102.0" text-anchor="middle" fill="#172033" font-family="Arial, sans-serif" font-size="12" font-weight="700">$74</text>
+  <text x="602.0" y="374" text-anchor="middle" fill="#5f6e84" font-family="Arial, sans-serif" font-size="11">Churned</text>
+</svg>

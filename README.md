@@ -33,7 +33,7 @@ The project includes the original interactive Archify HTML diagrams under `proje
 
 ## Visual project gallery
 
-The other portfolio projects now have individual visual detail pages with their existing images, repository-backed dataset counts, reported results, methods, findings, limitations, and direct links to the original README or notebook. This keeps the source documentation intact while making each project understandable before opening raw Markdown:
+The other portfolio projects now have individual visual detail pages with their existing images, repository-backed dataset counts, reported results, methods, findings, limitations, and project-specific evidence sets. Exploratory projects show relationships, distributions, and context; model projects show evaluation and method boundaries. This keeps the source documentation intact while making each project understandable before opening raw Markdown:
 
 ➡️ [Open the visual project index](projects/showcase.html) · Project cards on the [main portfolio](index.html#work) open their own visual detail page.
 
