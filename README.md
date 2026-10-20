@@ -31,6 +31,12 @@ An interactive local-first command deck for demonstrating multi-agent coordinati
 
 The project includes the original interactive Archify HTML diagrams under `projects/bigboymission/references/` and extracted SVGs so the architecture is visible directly in GitHub.
 
+## Visual project gallery
+
+The other portfolio projects now have a visual case-study page with their existing images, repository-backed dataset counts, reported results, methods, and direct links to the original README or notebook. This keeps the source documentation intact while making the evidence easier to scan:
+
+➡️ [Open the visual project gallery](projects/showcase.html)
+
 ## Project map
 
 | Area | Project | Primary focus |

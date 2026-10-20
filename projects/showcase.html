@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Visual case studies from Dat Dao's analytics, machine learning, NLP, forecasting, and data engineering projects.">
+  <meta name="theme-color" content="#f4f7fb">
+  <title>Project Gallery | Dat Dao</title>
+  <link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+  <a class="skip-link" href="#gallery">Skip to project gallery</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="Dat Dao home"><span class="brand-mark" aria-hidden="true">DD</span><span>Dat Dao</span></a>
+      <a class="back-link" href="../index.html#work">← Back to selected work</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Portfolio evidence / visual project gallery</p>
+        <h1 id="page-title">Eight projects. One clearer way to see the <em>evidence.</em></h1>
+        <p class="hero-lede">These projects are easier to understand when the dataset, method, and result sit beside the visual. The gallery keeps the original analysis intact while making the important numbers visible before you open the full README or notebook.</p>
+        <div class="hero-stats" aria-label="Project gallery summary">
+          <div class="hero-stat"><strong>8</strong><span>visual case studies beyond the featured AI system</span></div>
+          <div class="hero-stat"><strong>5</strong><span>method families: ML, statistics, time series, NLP, and data engineering</span></div>
+          <div class="hero-stat"><strong>1</strong><span>consistent evidence pattern: data, method, result, limitation</span></div>
+        </div>
+      </section>
+
+      <aside class="gallery-note" aria-label="Metric interpretation note">
+        <span aria-hidden="true">●</span>
+        <p><strong>How to read the numbers:</strong> dataset sizes are counted from the files in this repository. Performance values marked “reported” preserve the original project analysis; they are not new benchmark runs. Open each source note for assumptions and limitations.</p>
+      </aside>
+
+      <section id="gallery" class="gallery-grid" aria-label="Visual project case studies">
+        <article class="case-study" id="fraud">
+          <figure class="case-visual"><img src="../images/MIT-Fraud-Detection-PRESS_0.jpg" alt="Illustration representing credit card fraud detection" loading="lazy" width="900" height="560"><span class="case-number">01 / 08</span></figure>
+          <div class="case-body"><p class="case-kicker">Machine learning</p><h2>Credit card fraud detection</h2><p>A cost-aware classification study focused on suspicious transactions, class imbalance, and the trade-off between missed fraud and false alarms.</p><div class="metric-strip"><div class="metric"><strong>5</strong><span>evaluation lenses</span></div><div class="metric"><strong>2</strong><span>error costs to balance</span></div><div class="metric"><strong>CV</strong><span>validation included</span></div></div><div class="method-row"><span class="method">classification</span><span class="method">precision / recall</span><span class="method">scikit-learn</span></div><div class="case-links"><a class="text-link" href="../Machine%20Learning%20Credit%20Card%20Fraud%20Detection/README.md">Source notes ↗</a><a class="text-link muted-link" href="../Machine%20Learning%20Credit%20Card%20Fraud%20Detection/Credit%20Card%20Fraud.ipynb">Open notebook ↗</a></div></div>
+        </article>
+
+        <article class="case-study" id="churn">
+          <figure class="case-visual"><img src="../images/churn.jpg" alt="Telecom customer churn analysis visualization" loading="lazy" width="900" height="560"><span class="case-number">02 / 08</span></figure>
+          <div class="case-body"><p class="case-kicker">Predictive analytics</p><h2>Customer churn signals</h2><p>A retention-focused workflow that turns account, service, and contract behavior into interpretable signals for customer outreach.</p><div class="metric-strip"><div class="metric"><strong>7,043</strong><span>customers</span></div><div class="metric"><strong>21</strong><span>features</span></div><div class="metric"><strong>3</strong><span>model families</span></div></div><div class="method-row"><span class="method">logistic regression</span><span class="method">random forest</span><span class="method">LDA</span></div><div class="case-links"><a class="text-link" href="../Tele%20Customer%20Churn%20Rate%20%20Prediction%20Using%20Python/README.md">Source notes ↗</a><a class="text-link muted-link" href="../Tele%20Customer%20Churn%20Rate%20%20Prediction%20Using%20Python/Customer%20Churn%20Rate%20Prediction%20using%20Python.ipynb">Open notebook ↗</a></div></div>
+        </article>
+
+        <article class="case-study" id="housing-r">
+          <figure class="case-visual"><img src="../images/R%20housing.jpg" alt="Residential housing price prediction visualization" loading="lazy" width="900" height="560"><span class="case-number">03 / 08</span></figure>
+          <div class="case-body"><p class="case-kicker">Statistical modeling</p><h2>Housing price prediction in R</h2><p>An Ames housing study comparing interpretable regression ideas with a tree-based model for understanding sale-price variation.</p><div class="metric-strip"><div class="metric"><strong>2,930</strong><span>sales</span></div><div class="metric"><strong>~85%</strong><span>reported variation explained</span></div><div class="metric"><strong>80+</strong><span>regressors explored</span></div></div><div class="method-row"><span class="method">OLS</span><span class="method">random forest</span><span class="method">R</span></div><div class="case-links"><a class="text-link" href="../Predict%20housing%20prices%20in%20the%20US%20using%20R/README.md">Source notes ↗</a><a class="text-link muted-link" href="../Predict%20housing%20prices%20in%20the%20US%20using%20R/FinalCode.R">Open R script ↗</a></div></div>
+        </article>
+
+        <article class="case-study" id="stocks">
+          <figure class="case-visual"><img src="../images/stock-prices.jpg" alt="Stock price prediction visualization" loading="lazy" width="900" height="560"><span class="case-number">04 / 08</span></figure>
+          <div class="case-body"><p class="case-kicker">Time series</p><h2>ETF price forecasting</h2><p>A comparison of classical and recurrent forecasting approaches, with scaling and differencing called out so the result is not over-sold.</p><div class="metric-strip"><div class="metric"><strong>8</strong><span>ETFs</span></div><div class="metric"><strong>2</strong><span>model families</span></div><div class="metric"><strong>MSE</strong><span>primary metric</span></div></div><div class="method-row"><span class="method">ARIMA</span><span class="method">LSTM</span><span class="method">OHLCV</span></div><div class="case-links"><a class="text-link" href="../Stock%20Price%20Prediction%20with%20Python/README.md">Source notes ↗</a><a class="text-link muted-link" href="../Stock%20Price%20Prediction%20with%20Python/Stock%20Price%20Prediction%20with%20Python.ipynb">Open notebook ↗</a></div></div>
+        </article>
+
+        <article class="case-study" id="king-county">
+          <figure class="case-visual"><img src="../images/housevalue.jpg" alt="King County real estate valuation visualization" loading="lazy" width="900" height="560"><span class="case-number">05 / 08</span></figure>
+          <div class="case-body"><p class="case-kicker">Applied machine learning</p><h2>King County valuation</h2><p>A property-level regression workflow for exploring how size, grade, location, and other fields relate to residential sale price.</p><div class="metric-strip"><div class="metric"><strong>21,613</strong><span>sales</span></div><div class="metric"><strong>21</strong><span>dataset columns</span></div><div class="metric"><strong>1</strong><span>RF regression model</span></div></div><div class="method-row"><span class="method">feature engineering</span><span class="method">random forest</span><span class="method">valuation</span></div><div class="case-links"><a class="text-link" href="../Real%20Estate%20Valuation%20Optimization%20in%20King%20County/README.md">Source notes ↗</a><a class="text-link muted-link" href="../Real%20Estate%20Valuation%20Optimization%20in%20King%20County/Leveraging%20Machine%20Learning%20to%20Optimize%20Real%20Estate%20Valuation%20in%20King%20County.ipynb">Open notebook ↗</a></div></div>
+        </article>
+
+        <article class="case-study" id="ames">
+          <figure class="case-visual"><img src="../images/p1.jpg" alt="Ames residential property analysis visualization" loading="lazy" width="900" height="560"><span class="case-number">06 / 08</span></figure>
+          <div class="case-body"><p class="case-kicker">Exploratory analysis</p><h2>Ames housing exploration</h2><p>An exploratory and diagnostic workflow showing how quality, living area, neighborhood, and age relate to SalePrice.</p><div class="metric-strip"><div class="metric"><strong>2,920</strong><span>cleaned rows</span></div><div class="metric"><strong>20</strong><span>dataset columns</span></div><div class="metric"><strong>45.2%</strong><span>reported R²</span></div></div><div class="method-row"><span class="method">EDA</span><span class="method">regression</span><span class="method">Python</span></div><div class="case-links"><a class="text-link" href="../Data%20exploration%20and%20analysis%20using%20Python%20for%20residential%20properties%20in%20Ames,%20Iowa/README.md">Source notes ↗</a><a class="text-link muted-link" href="../Data%20exploration%20and%20analysis%20using%20Python%20for%20residential%20properties%20in%20Ames,%20Iowa/Data%20Exploreation%20and%20Analysis%20Ames,Iowa.ipynb">Open notebook ↗</a></div></div>
+        </article>
+
+        <article class="case-study" id="nlp">
+          <figure class="case-visual"><img src="../images/Jobmatching.jpg" alt="NLP job matching analysis visualization" loading="lazy" width="900" height="560"><span class="case-number">07 / 08</span></figure>
+          <div class="case-body"><p class="case-kicker">Natural language processing</p><h2>Job matching with NLP</h2><p>A text classification baseline that converts job descriptions into category signals while keeping category-level performance and bias visible.</p><div class="metric-strip"><div class="metric"><strong>325</strong><span>job records</span></div><div class="metric"><strong>TF-IDF</strong><span>text representation</span></div><div class="metric"><strong>4</strong><span>evaluation views</span></div></div><div class="method-row"><span class="method">TF-IDF</span><span class="method">Naive Bayes</span><span class="method">classification</span></div><div class="case-links"><a class="text-link" href="../Enhancing%20Job%20Matching%20and%20Market%20Analysis%20through%20NLP/README.md">Source notes ↗</a><a class="text-link muted-link" href="../Enhancing%20Job%20Matching%20and%20Market%20Analysis%20through%20NLP/Job%20Description%20NLP.ipynb">Open notebook ↗</a></div></div>
+        </article>
+
+        <article class="case-study" id="ecommerce">
+          <figure class="case-visual"><img src="../images/Esri-and-Big-Data.jpg" alt="Big-data ingestion and processing pipeline visualization" loading="lazy" width="900" height="560"><span class="case-number">08 / 08</span></figure>
+          <div class="case-body"><p class="case-kicker">Data engineering</p><h2>E-commerce data pipeline</h2><p>An architecture study that separates ingestion, streaming, storage, and analysis so a high-volume workflow can be inspected and extended.</p><div class="metric-strip"><div class="metric"><strong>541,909</strong><span>records</span></div><div class="metric"><strong>8</strong><span>source fields</span></div><div class="metric"><strong>4</strong><span>pipeline layers</span></div></div><div class="method-row"><span class="method">Apache NiFi</span><span class="method">Kafka</span><span class="method">HDFS</span></div><div class="case-links"><a class="text-link" href="../E-Commerce%20BigData/README.md">Source notes ↗</a><a class="text-link muted-link" href="../E-Commerce%20BigData/Project%20Report%20Ecommerce%20Data%20Ingestion%20and%20Processing%20Pipeline.pdf">Open report ↗</a></div></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer-note"><span>© 2026 Dat Dao · Metrics are repository-backed or marked reported.</span><a href="https://github.com/sammon229/datdao" target="_blank" rel="noreferrer">View source on GitHub ↗</a></footer>
+  </div>
+</body>
+</html>
