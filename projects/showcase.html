@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Visual case studies from Dat Dao's analytics, machine learning, NLP, forecasting, and data engineering projects.">
   <meta name="theme-color" content="#f4f7fb">
-  <title>Project Gallery | Dat Dao</title>
+  <title>Project Story Index | Dat Dao</title>
   <link rel="stylesheet" href="showcase.css">
 </head>
 <body>
@@ -18,20 +18,26 @@
 
     <main>
       <section class="hero" aria-labelledby="page-title">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Portfolio evidence / visual project gallery</p>
-        <h1 id="page-title">Eight projects. One clearer way to see the <em>evidence.</em></h1>
-        <p class="hero-lede">These projects are easier to understand when the dataset, method, and result sit beside the visual. The gallery keeps the original analysis intact while making the important numbers visible before you open the full README or notebook.</p>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Portfolio evidence / a visual story index</p>
+        <h1 id="page-title">A field guide from messy signals to <em>usable systems.</em></h1>
+        <p class="hero-lede">This is not a gallery of unrelated exercises. It is a sequence of questions: how do we find the signal, test what a decision leaves out, and build an operating layer that can carry the answer forward?</p>
         <div class="hero-stats" aria-label="Project gallery summary">
-          <div class="hero-stat"><strong>8</strong><span>visual case studies beyond the featured AI system</span></div>
-          <div class="hero-stat"><strong>5</strong><span>method families: ML, statistics, time series, NLP, and data engineering</span></div>
-          <div class="hero-stat"><strong>1</strong><span>consistent evidence pattern: data, method, result, limitation</span></div>
+          <div class="hero-stat"><strong>3</strong><span>chapters in the same operating question</span></div>
+          <div class="hero-stat"><strong>8</strong><span>visual case studies with repository-backed evidence</span></div>
+          <div class="hero-stat"><strong>1</strong><span>through-line: make the handoff dependable</span></div>
         </div>
       </section>
 
       <aside class="gallery-note" aria-label="Metric interpretation note">
         <span aria-hidden="true">●</span>
-        <p><strong>How to read the numbers:</strong> dataset sizes are counted from the files in this repository. Performance values marked “reported” preserve the original project analysis; they are not new benchmark runs. Open each source note for assumptions and limitations.</p>
+        <p><strong>How to read the story:</strong> start with the chapter that matches your question, then open the project for its visual evidence. Dataset sizes are counted from this repository; values marked “reported” preserve the original analysis rather than claiming a new benchmark.</p>
       </aside>
+
+      <nav class="chapter-index" aria-label="Story chapters">
+        <a class="chapter-link chapter-link-blue" href="#ames"><span>01</span><strong>Find the signal</strong><small>Ames, fraud, and the first useful question.</small></a>
+        <a class="chapter-link chapter-link-mint" href="#churn"><span>02</span><strong>Test the decision</strong><small>Models, costs, uncertainty, and human context.</small></a>
+        <a class="chapter-link chapter-link-orange" href="#ecommerce"><span>03</span><strong>Build the operating layer</strong><small>Pipelines and systems that survive handoff.</small></a>
+      </nav>
 
       <section id="gallery" class="gallery-grid" aria-label="Visual project case studies">
         <article class="case-study" id="fraud">

@@ -2,6 +2,7 @@ const projects = {
   fraud: {
     category: "Machine learning",
     title: "Credit card fraud detection",
+    storyBeat: "I started by asking what a good model is allowed to hide: the cost of missed fraud, false alarms, and an evaluation frame that can survive scrutiny.",
     summary: "A cost-aware classification study focused on suspicious transactions, class imbalance, and the trade-off between missed fraud and false alarms.",
     image: "../images/MIT-Fraud-Detection-PRESS_0.jpg",
     alt: "Illustration representing credit card fraud detection",
@@ -18,6 +19,7 @@ const projects = {
   churn: {
     category: "Predictive analytics",
     title: "Customer churn signals",
+    storyBeat: "The next question was practical: once a pattern is visible, can a team use it to decide who deserves attention without losing the explanation?",
     summary: "A retention-focused workflow that turns account, service, and contract behavior into interpretable signals for customer outreach.",
     image: "../images/churn.jpg",
     alt: "Telecom customer churn analysis visualization",
@@ -34,6 +36,7 @@ const projects = {
   "housing-r": {
     category: "Statistical modeling",
     title: "Housing price prediction in R",
+    storyBeat: "Interpretability became the test: what changes when a familiar statistical baseline meets a nonlinear model, and what still needs explaining?",
     summary: "An Ames housing study comparing interpretable regression ideas with a tree-based model for understanding sale-price variation.",
     image: "../images/R%20housing.jpg",
     alt: "Residential housing price prediction visualization",
@@ -50,6 +53,7 @@ const projects = {
   stocks: {
     category: "Time series",
     title: "ETF price forecasting",
+    storyBeat: "Forecasting exposed the cost of measuring unlike things on unlike scales, so the model comparison became a lesson in what metrics leave out.",
     summary: "A comparison of classical and recurrent forecasting approaches, with scaling and differencing called out so the result is not over-sold.",
     image: "../images/stock-prices.jpg",
     alt: "Stock price prediction visualization",
@@ -66,6 +70,7 @@ const projects = {
   "king-county": {
     category: "Applied machine learning",
     title: "King County valuation",
+    storyBeat: "Valuation made the same tension operational: useful guidance without pretending that a model is a professional appraisal.",
     summary: "A property-level regression workflow for exploring how size, grade, location, and other fields relate to residential sale price.",
     image: "../images/housevalue.jpg",
     alt: "King County real estate valuation visualization",
@@ -82,6 +87,7 @@ const projects = {
   ames: {
     category: "Exploratory analysis",
     title: "Ames housing exploration",
+    storyBeat: "The first move is exploratory: understand the shape of the problem before optimizing a model or making a claim about it.",
     summary: "An exploratory and diagnostic workflow showing how quality, living area, neighborhood, and age relate to SalePrice.",
     image: "../images/p1.jpg",
     alt: "Ames residential property analysis visualization",
@@ -98,6 +104,7 @@ const projects = {
   nlp: {
     category: "Natural language processing",
     title: "Job matching with NLP",
+    storyBeat: "The signal moved from numeric fields into language, where category imbalance, match quality, and bias become part of the model’s responsibility.",
     summary: "A text classification baseline that converts job descriptions into category signals while keeping category-level performance and bias visible.",
     image: "../images/Jobmatching.jpg",
     alt: "NLP job matching analysis visualization",
@@ -114,6 +121,7 @@ const projects = {
   ecommerce: {
     category: "Data engineering",
     title: "E-commerce data pipeline",
+    storyBeat: "Eventually the question stopped being only what the data says, and became how the data moves: can each stage be inspected, replayed, and handed off?",
     summary: "An architecture study that separates ingestion, streaming, storage, and analysis so a high-volume workflow can be inspected and extended.",
     image: "../images/Esri-and-Big-Data.jpg",
     alt: "Big-data ingestion and processing pipeline visualization",
@@ -134,6 +142,7 @@ const project = projects[key];
 const extra = (window.evidenceData && window.evidenceData[key]) || null;
 const root = document.querySelector("#project-root");
 const evidenceVisuals = extra ? (extra.images || [{ image: extra.image, title: "Evidence visual", alt: extra.alt, caption: extra.caption }]) : [];
+const chapter = ["ames", "fraud"].includes(key) ? "01" : key === "ecommerce" ? "03" : "02";
 
 if (!project) {
   root.innerHTML = '<section class="error-state"><p class="eyebrow">Project not found</p><h1>Choose a project from the portfolio.</h1><p class="hero-summary">This detail page uses a stable project key from the main portfolio. Return to selected work and choose a project card to open its visual evidence.</p><a class="button button-primary" href="../index.html#work">Back to selected work ↗</a></section>';
@@ -154,6 +163,7 @@ if (!project) {
         </div>
         <figure class="hero-visual"><img src="${project.image}" alt="${project.alt}" width="900" height="560"><figcaption>Visual support · project artifact / analysis context</figcaption></figure>
       </section>
+      <aside class="story-beat" aria-label="Story beat"><span class="story-beat-mark" aria-hidden="true">${chapter}</span><div><p class="eyebrow">Why this chapter matters</p><p>${project.storyBeat}</p></div></aside>
       <section class="metric-band" aria-label="Project metrics">${project.metrics.map(([value, label]) => `<div class="metric"><strong>${value}</strong><span>${label}</span></div>`).join("")}</section>
       ${extra ? `<section class="evidence-visual" aria-labelledby="visual-title"><div class="evidence-visual-head"><div><p class="eyebrow">Evidence set</p><h2 id="visual-title">Visual support for the thesis</h2><p class="evidence-intro">Multiple views make the project claim inspectable: compare the relationship, the distribution, and the limits of the data.</p></div><span class="evidence-kind">${extra.kind}</span></div><div class="evidence-grid">${evidenceVisuals.map((item, index) => `<figure class="evidence-chart"><div class="evidence-chart-index">${String(index + 1).padStart(2, "0")}</div><img src="${item.image}" alt="${item.alt}" width="840" height="420" loading="lazy"><figcaption><strong>${item.title}</strong><span>${item.caption}</span></figcaption></figure>`).join("")}</div></section>` : ""}
       <section class="detail-grid" aria-label="Project evidence and interpretation">
